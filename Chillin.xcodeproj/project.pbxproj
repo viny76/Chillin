@@ -8,14 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		2CCE00111C9D954900A5C164 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE00101C9D954900A5C164 /* main.m */; };
-		2CCE00141C9D954900A5C164 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE00131C9D954900A5C164 /* AppDelegate.m */; };
-		2CCE00171C9D954900A5C164 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE00161C9D954900A5C164 /* ViewController.m */; };
 		2CCE001A1C9D954900A5C164 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CCE00181C9D954900A5C164 /* Main.storyboard */; };
 		2CCE001D1C9D954900A5C164 /* Chillin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE001B1C9D954900A5C164 /* Chillin.xcdatamodeld */; };
 		2CCE001F1C9D954900A5C164 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CCE001E1C9D954900A5C164 /* Assets.xcassets */; };
-		2CCE00221C9D954900A5C164 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CCE00201C9D954900A5C164 /* LaunchScreen.storyboard */; };
 		2CCE002D1C9D954900A5C164 /* ChillinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE002C1C9D954900A5C164 /* ChillinTests.m */; };
 		2CCE00381C9D954900A5C164 /* ChillinUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE00371C9D954900A5C164 /* ChillinUITests.m */; };
+		2CCE00481C9D95C000A5C164 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CCE00451C9D95C000A5C164 /* LaunchScreen.xib */; };
+		2CCE00491C9D95C000A5C164 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE00471C9D95C000A5C164 /* AppDelegate.m */; };
+		2CCE004C1C9D960B00A5C164 /* SevenSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE004B1C9D960B00A5C164 /* SevenSwitch.swift */; };
+		2CCE005F1C9D971F00A5C164 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE00561C9D971F00A5C164 /* Constants.m */; };
+		2CCE00601C9D971F00A5C164 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE00581C9D971F00A5C164 /* Person.m */; };
+		2CCE00611C9D971F00A5C164 /* Screen.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE005A1C9D971F00A5C164 /* Screen.m */; };
+		2CCE00621C9D971F00A5C164 /* StringFromDateTranslate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE005C1C9D971F00A5C164 /* StringFromDateTranslate.m */; };
+		2CCE00631C9D971F00A5C164 /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE005E1C9D971F00A5C164 /* UIColor+CustomColors.m */; };
+		2CCE00661C9D972A00A5C164 /* EditFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE00651C9D972A00A5C164 /* EditFriendsViewController.m */; };
+		2CCE006B1C9D974600A5C164 /* AddEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE006A1C9D974600A5C164 /* AddEventsViewController.m */; };
+		2CCE006E1C9D974D00A5C164 /* EventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE006D1C9D974D00A5C164 /* EventDetailViewController.m */; };
+		2CCE00731C9D975500A5C164 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE00701C9D975500A5C164 /* HomeViewController.m */; };
+		2CCE00741C9D975500A5C164 /* HomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE00721C9D975500A5C164 /* HomeCell.m */; };
+		2CCE00771C9D975C00A5C164 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE00761C9D975C00A5C164 /* LoginViewController.m */; };
+		2CCE00821C9D976A00A5C164 /* ButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE00791C9D976A00A5C164 /* ButtonTableViewCell.m */; };
+		2CCE00831C9D976A00A5C164 /* LabelButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE007B1C9D976A00A5C164 /* LabelButtonTableViewCell.m */; };
+		2CCE00841C9D976A00A5C164 /* SettingsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE007D1C9D976A00A5C164 /* SettingsCell.m */; };
+		2CCE00851C9D976A00A5C164 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE007F1C9D976A00A5C164 /* SettingsViewController.m */; };
+		2CCE00861C9D976A00A5C164 /* SwitchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE00811C9D976A00A5C164 /* SwitchTableViewCell.m */; };
+		2CCE00891C9D977600A5C164 /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE00881C9D977600A5C164 /* SignupViewController.m */; };
+		8C7B6BD8F08AC45EB9DB098C /* Pods_Chillin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D03A8F66579C506063E50567 /* Pods_Chillin.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,16 +54,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B29F4D3F2A0DA78D54C85C5 /* Pods-Chillin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chillin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chillin/Pods-Chillin.debug.xcconfig"; sourceTree = "<group>"; };
 		2CCE000C1C9D954900A5C164 /* Chillin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chillin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CCE00101C9D954900A5C164 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2CCE00121C9D954900A5C164 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		2CCE00131C9D954900A5C164 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2CCE00151C9D954900A5C164 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2CCE00161C9D954900A5C164 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2CCE00191C9D954900A5C164 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2CCE001C1C9D954900A5C164 /* Chillin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Chillin.xcdatamodel; sourceTree = "<group>"; };
 		2CCE001E1C9D954900A5C164 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2CCE00211C9D954900A5C164 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2CCE00231C9D954900A5C164 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CCE00281C9D954900A5C164 /* ChillinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChillinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CCE002C1C9D954900A5C164 /* ChillinTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChillinTests.m; sourceTree = "<group>"; };
@@ -53,6 +67,47 @@
 		2CCE00331C9D954900A5C164 /* ChillinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChillinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CCE00371C9D954900A5C164 /* ChillinUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChillinUITests.m; sourceTree = "<group>"; };
 		2CCE00391C9D954900A5C164 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CCE00451C9D95C000A5C164 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		2CCE00461C9D95C000A5C164 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2CCE00471C9D95C000A5C164 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2CCE004A1C9D960A00A5C164 /* Chillin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chillin-Bridging-Header.h"; sourceTree = "<group>"; };
+		2CCE004B1C9D960B00A5C164 /* SevenSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SevenSwitch.swift; sourceTree = "<group>"; };
+		2CCE00551C9D971F00A5C164 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		2CCE00561C9D971F00A5C164 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		2CCE00571C9D971F00A5C164 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		2CCE00581C9D971F00A5C164 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		2CCE00591C9D971F00A5C164 /* Screen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Screen.h; sourceTree = "<group>"; };
+		2CCE005A1C9D971F00A5C164 /* Screen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Screen.m; sourceTree = "<group>"; };
+		2CCE005B1C9D971F00A5C164 /* StringFromDateTranslate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringFromDateTranslate.h; sourceTree = "<group>"; };
+		2CCE005C1C9D971F00A5C164 /* StringFromDateTranslate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringFromDateTranslate.m; sourceTree = "<group>"; };
+		2CCE005D1C9D971F00A5C164 /* UIColor+CustomColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CustomColors.h"; sourceTree = "<group>"; };
+		2CCE005E1C9D971F00A5C164 /* UIColor+CustomColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CustomColors.m"; sourceTree = "<group>"; };
+		2CCE00641C9D972A00A5C164 /* EditFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditFriendsViewController.h; sourceTree = "<group>"; };
+		2CCE00651C9D972A00A5C164 /* EditFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditFriendsViewController.m; sourceTree = "<group>"; };
+		2CCE00691C9D974600A5C164 /* AddEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEventsViewController.h; sourceTree = "<group>"; };
+		2CCE006A1C9D974600A5C164 /* AddEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEventsViewController.m; sourceTree = "<group>"; };
+		2CCE006C1C9D974D00A5C164 /* EventDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailViewController.h; sourceTree = "<group>"; };
+		2CCE006D1C9D974D00A5C164 /* EventDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailViewController.m; sourceTree = "<group>"; };
+		2CCE006F1C9D975500A5C164 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		2CCE00701C9D975500A5C164 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		2CCE00711C9D975500A5C164 /* HomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCell.h; sourceTree = "<group>"; };
+		2CCE00721C9D975500A5C164 /* HomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCell.m; sourceTree = "<group>"; };
+		2CCE00751C9D975C00A5C164 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		2CCE00761C9D975C00A5C164 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		2CCE00781C9D976A00A5C164 /* ButtonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonTableViewCell.h; sourceTree = "<group>"; };
+		2CCE00791C9D976A00A5C164 /* ButtonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonTableViewCell.m; sourceTree = "<group>"; };
+		2CCE007A1C9D976A00A5C164 /* LabelButtonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelButtonTableViewCell.h; sourceTree = "<group>"; };
+		2CCE007B1C9D976A00A5C164 /* LabelButtonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelButtonTableViewCell.m; sourceTree = "<group>"; };
+		2CCE007C1C9D976A00A5C164 /* SettingsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsCell.h; sourceTree = "<group>"; };
+		2CCE007D1C9D976A00A5C164 /* SettingsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsCell.m; sourceTree = "<group>"; };
+		2CCE007E1C9D976A00A5C164 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		2CCE007F1C9D976A00A5C164 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		2CCE00801C9D976A00A5C164 /* SwitchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchTableViewCell.h; sourceTree = "<group>"; };
+		2CCE00811C9D976A00A5C164 /* SwitchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchTableViewCell.m; sourceTree = "<group>"; };
+		2CCE00871C9D977600A5C164 /* SignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupViewController.h; sourceTree = "<group>"; };
+		2CCE00881C9D977600A5C164 /* SignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
+		895EE5BFECE825E27AB4EE31 /* Pods-Chillin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chillin.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chillin/Pods-Chillin.release.xcconfig"; sourceTree = "<group>"; };
+		D03A8F66579C506063E50567 /* Pods_Chillin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chillin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C7B6BD8F08AC45EB9DB098C /* Pods_Chillin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +136,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0092DD087C4D5AA5FBDE1967 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2B29F4D3F2A0DA78D54C85C5 /* Pods-Chillin.debug.xcconfig */,
+				895EE5BFECE825E27AB4EE31 /* Pods-Chillin.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		2CCE00031C9D954900A5C164 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +152,8 @@
 				2CCE002B1C9D954900A5C164 /* ChillinTests */,
 				2CCE00361C9D954900A5C164 /* ChillinUITests */,
 				2CCE000D1C9D954900A5C164 /* Products */,
+				0092DD087C4D5AA5FBDE1967 /* Pods */,
+				C5C12B03590094EA19C0F870 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,15 +170,19 @@
 		2CCE000E1C9D954900A5C164 /* Chillin */ = {
 			isa = PBXGroup;
 			children = (
-				2CCE00121C9D954900A5C164 /* AppDelegate.h */,
-				2CCE00131C9D954900A5C164 /* AppDelegate.m */,
-				2CCE00151C9D954900A5C164 /* ViewController.h */,
-				2CCE00161C9D954900A5C164 /* ViewController.m */,
-				2CCE00181C9D954900A5C164 /* Main.storyboard */,
+				2CCE00461C9D95C000A5C164 /* AppDelegate.h */,
+				2CCE00471C9D95C000A5C164 /* AppDelegate.m */,
 				2CCE001E1C9D954900A5C164 /* Assets.xcassets */,
-				2CCE00201C9D954900A5C164 /* LaunchScreen.storyboard */,
-				2CCE00231C9D954900A5C164 /* Info.plist */,
+				2CCE00181C9D954900A5C164 /* Main.storyboard */,
+				2CCE00451C9D95C000A5C164 /* LaunchScreen.xib */,
 				2CCE001B1C9D954900A5C164 /* Chillin.xcdatamodeld */,
+				2CCE004E1C9D96C500A5C164 /* Common */,
+				2CCE004F1C9D96CC00A5C164 /* Edit Friends */,
+				2CCE00501C9D96D500A5C164 /* Event */,
+				2CCE00511C9D96E900A5C164 /* Home */,
+				2CCE00521C9D96F000A5C164 /* Login */,
+				2CCE00531C9D96F500A5C164 /* Settings */,
+				2CCE00541C9D96FD00A5C164 /* Signup */,
 				2CCE000F1C9D954900A5C164 /* Supporting Files */,
 			);
 			path = Chillin;
@@ -120,7 +191,10 @@
 		2CCE000F1C9D954900A5C164 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2CCE00231C9D954900A5C164 /* Info.plist */,
 				2CCE00101C9D954900A5C164 /* main.m */,
+				2CCE004B1C9D960B00A5C164 /* SevenSwitch.swift */,
+				2CCE004A1C9D960A00A5C164 /* Chillin-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -143,6 +217,113 @@
 			path = ChillinUITests;
 			sourceTree = "<group>";
 		};
+		2CCE004E1C9D96C500A5C164 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2CCE00551C9D971F00A5C164 /* Constants.h */,
+				2CCE00561C9D971F00A5C164 /* Constants.m */,
+				2CCE00571C9D971F00A5C164 /* Person.h */,
+				2CCE00581C9D971F00A5C164 /* Person.m */,
+				2CCE00591C9D971F00A5C164 /* Screen.h */,
+				2CCE005A1C9D971F00A5C164 /* Screen.m */,
+				2CCE005B1C9D971F00A5C164 /* StringFromDateTranslate.h */,
+				2CCE005C1C9D971F00A5C164 /* StringFromDateTranslate.m */,
+				2CCE005D1C9D971F00A5C164 /* UIColor+CustomColors.h */,
+				2CCE005E1C9D971F00A5C164 /* UIColor+CustomColors.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		2CCE004F1C9D96CC00A5C164 /* Edit Friends */ = {
+			isa = PBXGroup;
+			children = (
+				2CCE00641C9D972A00A5C164 /* EditFriendsViewController.h */,
+				2CCE00651C9D972A00A5C164 /* EditFriendsViewController.m */,
+			);
+			name = "Edit Friends";
+			sourceTree = "<group>";
+		};
+		2CCE00501C9D96D500A5C164 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				2CCE00671C9D973200A5C164 /* Add Event */,
+				2CCE00681C9D973800A5C164 /* Event Detail */,
+			);
+			name = Event;
+			sourceTree = "<group>";
+		};
+		2CCE00511C9D96E900A5C164 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2CCE006F1C9D975500A5C164 /* HomeViewController.h */,
+				2CCE00701C9D975500A5C164 /* HomeViewController.m */,
+				2CCE00711C9D975500A5C164 /* HomeCell.h */,
+				2CCE00721C9D975500A5C164 /* HomeCell.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		2CCE00521C9D96F000A5C164 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2CCE00751C9D975C00A5C164 /* LoginViewController.h */,
+				2CCE00761C9D975C00A5C164 /* LoginViewController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		2CCE00531C9D96F500A5C164 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				2CCE00781C9D976A00A5C164 /* ButtonTableViewCell.h */,
+				2CCE00791C9D976A00A5C164 /* ButtonTableViewCell.m */,
+				2CCE007A1C9D976A00A5C164 /* LabelButtonTableViewCell.h */,
+				2CCE007B1C9D976A00A5C164 /* LabelButtonTableViewCell.m */,
+				2CCE007C1C9D976A00A5C164 /* SettingsCell.h */,
+				2CCE007D1C9D976A00A5C164 /* SettingsCell.m */,
+				2CCE007E1C9D976A00A5C164 /* SettingsViewController.h */,
+				2CCE007F1C9D976A00A5C164 /* SettingsViewController.m */,
+				2CCE00801C9D976A00A5C164 /* SwitchTableViewCell.h */,
+				2CCE00811C9D976A00A5C164 /* SwitchTableViewCell.m */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		2CCE00541C9D96FD00A5C164 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				2CCE00871C9D977600A5C164 /* SignupViewController.h */,
+				2CCE00881C9D977600A5C164 /* SignupViewController.m */,
+			);
+			name = Signup;
+			sourceTree = "<group>";
+		};
+		2CCE00671C9D973200A5C164 /* Add Event */ = {
+			isa = PBXGroup;
+			children = (
+				2CCE00691C9D974600A5C164 /* AddEventsViewController.h */,
+				2CCE006A1C9D974600A5C164 /* AddEventsViewController.m */,
+			);
+			name = "Add Event";
+			sourceTree = "<group>";
+		};
+		2CCE00681C9D973800A5C164 /* Event Detail */ = {
+			isa = PBXGroup;
+			children = (
+				2CCE006C1C9D974D00A5C164 /* EventDetailViewController.h */,
+				2CCE006D1C9D974D00A5C164 /* EventDetailViewController.m */,
+			);
+			name = "Event Detail";
+			sourceTree = "<group>";
+		};
+		C5C12B03590094EA19C0F870 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D03A8F66579C506063E50567 /* Pods_Chillin.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,9 +331,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2CCE003C1C9D954900A5C164 /* Build configuration list for PBXNativeTarget "Chillin" */;
 			buildPhases = (
+				BE0D823600B5CF4558E9BB8B /* Check Pods Manifest.lock */,
 				2CCE00081C9D954900A5C164 /* Sources */,
 				2CCE00091C9D954900A5C164 /* Frameworks */,
 				2CCE000A1C9D954900A5C164 /* Resources */,
+				B082F69B290378701021350D /* Embed Pods Frameworks */,
+				EC6782F6177B6E59A2CC972B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -210,6 +394,12 @@
 				TargetAttributes = {
 					2CCE000B1C9D954900A5C164 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 2NB67X8DYS;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					2CCE00271C9D954900A5C164 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -246,8 +436,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CCE00221C9D954900A5C164 /* LaunchScreen.storyboard in Resources */,
 				2CCE001F1C9D954900A5C164 /* Assets.xcassets in Resources */,
+				2CCE00481C9D95C000A5C164 /* LaunchScreen.xib in Resources */,
 				2CCE001A1C9D954900A5C164 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,15 +458,80 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B082F69B290378701021350D /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Chillin/Pods-Chillin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE0D823600B5CF4558E9BB8B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EC6782F6177B6E59A2CC972B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Chillin/Pods-Chillin-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2CCE00081C9D954900A5C164 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CCE00171C9D954900A5C164 /* ViewController.m in Sources */,
-				2CCE00141C9D954900A5C164 /* AppDelegate.m in Sources */,
+				2CCE00661C9D972A00A5C164 /* EditFriendsViewController.m in Sources */,
+				2CCE00601C9D971F00A5C164 /* Person.m in Sources */,
+				2CCE00841C9D976A00A5C164 /* SettingsCell.m in Sources */,
+				2CCE00611C9D971F00A5C164 /* Screen.m in Sources */,
+				2CCE005F1C9D971F00A5C164 /* Constants.m in Sources */,
+				2CCE00861C9D976A00A5C164 /* SwitchTableViewCell.m in Sources */,
+				2CCE00631C9D971F00A5C164 /* UIColor+CustomColors.m in Sources */,
+				2CCE00621C9D971F00A5C164 /* StringFromDateTranslate.m in Sources */,
+				2CCE006E1C9D974D00A5C164 /* EventDetailViewController.m in Sources */,
 				2CCE00111C9D954900A5C164 /* main.m in Sources */,
 				2CCE001D1C9D954900A5C164 /* Chillin.xcdatamodeld in Sources */,
+				2CCE00831C9D976A00A5C164 /* LabelButtonTableViewCell.m in Sources */,
+				2CCE00891C9D977600A5C164 /* SignupViewController.m in Sources */,
+				2CCE00851C9D976A00A5C164 /* SettingsViewController.m in Sources */,
+				2CCE00491C9D95C000A5C164 /* AppDelegate.m in Sources */,
+				2CCE006B1C9D974600A5C164 /* AddEventsViewController.m in Sources */,
+				2CCE004C1C9D960B00A5C164 /* SevenSwitch.swift in Sources */,
+				2CCE00741C9D975500A5C164 /* HomeCell.m in Sources */,
+				2CCE00731C9D975500A5C164 /* HomeViewController.m in Sources */,
+				2CCE00771C9D975C00A5C164 /* LoginViewController.m in Sources */,
+				2CCE00821C9D976A00A5C164 /* ButtonTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,14 +573,6 @@
 				2CCE00191C9D954900A5C164 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		2CCE00201C9D954900A5C164 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2CCE00211C9D954900A5C164 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -415,23 +662,38 @@
 		};
 		2CCE003D1C9D954900A5C164 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B29F4D3F2A0DA78D54C85C5 /* Pods-Chillin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Chillin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = JardelCompany.Chillin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Chillin/Chillin-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		2CCE003E1C9D954900A5C164 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 895EE5BFECE825E27AB4EE31 /* Pods-Chillin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Chillin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = JardelCompany.Chillin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Chillin/Chillin-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -502,6 +764,7 @@
 				2CCE003E1C9D954900A5C164 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2CCE003F1C9D954900A5C164 /* Build configuration list for PBXNativeTarget "ChillinTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +773,7 @@
 				2CCE00411C9D954900A5C164 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2CCE00421C9D954900A5C164 /* Build configuration list for PBXNativeTarget "ChillinUITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +782,7 @@
 				2CCE00441C9D954900A5C164 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

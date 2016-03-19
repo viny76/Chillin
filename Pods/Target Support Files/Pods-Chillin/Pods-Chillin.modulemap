@@ -1,0 +1,6 @@
+framework module Pods_Chillin {
+  umbrella header "Pods-Chillin-umbrella.h"
+
+  export *
+  module * { export * }
+}
