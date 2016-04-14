@@ -47,6 +47,15 @@
     self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background"]];
     [self.tableView.backgroundView setContentMode:UIViewContentModeScaleAspectFill];
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    
+    [PFCloud callFunctionInBackground:@"iosPushTest" withParameters:@{@"text" : @"Testing"} block:^(id object, NSError *error) {
+        if (!error) {
+            NSLog(@"YES");
+        } else {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Try Again !" message:@"Check your network" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alert show];
+        }
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

@@ -23,6 +23,12 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     }]];
     [PFUser enableRevocableSessionInBackground];
     
+    // Push Notifications
+    UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound);
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes  categories:nil];
+    [application registerUserNotificationSettings:settings];
+    [application registerForRemoteNotifications];
+    
     
 //    [Parse setApplicationId:@"VpU4JfFKNOI1syoeVaWwmSGbDeMFBfVLld2T7Fdi"
 //                  clientKey:@"1UxA7TR2HDuFSnILmLrJWi7zdlsnQz2ZYj2t9kls"];
@@ -36,6 +42,20 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
         self.window.rootViewController = navigation;
     }
     return YES;
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    // Store the deviceToken in the current installation and save it to Parse.
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setDeviceTokenFromData:deviceToken];
+    if ([PFUser currentUser] != nil) {
+        [currentInstallation setObject:@[[PFUser currentUser].objectId] forKey:@"channels"];
+    }
+    [currentInstallation saveInBackground];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    [PFPush handlePush:userInfo];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

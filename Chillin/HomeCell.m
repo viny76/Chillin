@@ -28,9 +28,9 @@
     //    UIImage *bg     =   SomeImage();
     //    UIColor *bgc    =   [UIColor colorWithPatternImage:bg alfa:0.5];
     //    [self setBackgroundColor:bgc];
-    [self.background setImage:[UIImage imageNamed:@"background"]];
-    self.background.opaque = NO;
-    [self.background setAlpha:0.5];
+//    [self.background setImage:[UIImage imageNamed:@"background"]];
+    self.background.opaque = YES;
+//    [self.background setAlpha:0.5];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
