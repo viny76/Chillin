@@ -56,18 +56,21 @@
             
             [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                 if (error) {
-                    UIAlertView *alertViewSignUp = [[UIAlertView alloc] initWithTitle:@"Sorry!" message:[error.userInfo objectForKey:@"error"] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-                    [alertViewSignUp show];
-                    [self.hud removeFromSuperview];
+                    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Sorry!" message:[error.userInfo objectForKey:@"error"] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                    [alertView show];
                 } else {
+                    // Save user for Push notification
+                    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+                    [currentInstallation setObject:[PFUser currentUser].objectId forKey: @"userId"];
+                    [currentInstallation saveInBackground];
                     AppDelegate *appDelegateTemp = [[UIApplication sharedApplication]delegate];
                     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"logged"];
                     appDelegateTemp.window.rootViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateInitialViewController];
                     
-                    UIAlertView *alertViewRegistered = [[UIAlertView alloc] initWithTitle:@"Completed Registration !" message:[error.userInfo objectForKey:@"error"] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-                    [alertViewRegistered show];
-                    [self.hud removeFromSuperview];
+                    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Completed Registration !" message:[error.userInfo objectForKey:@"error"] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                    [alertView show];
                 }
+                [self.hud removeFromSuperview];
             }];
         } else {
             [self.hud removeFromSuperview];
