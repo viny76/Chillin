@@ -45,6 +45,11 @@
                                              [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"logged"];
                                              appDelegateTemp.window.rootViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateInitialViewController];
                                              [self.hud removeFromSuperview];
+                                             
+                                             // Save user for Push notification
+                                             PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+                                             [currentInstallation setObject:[PFUser currentUser].objectId forKey: @"userId"];
+                                             [currentInstallation saveInBackground];
                                          }
                                      }];
     }

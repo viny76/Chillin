@@ -102,8 +102,8 @@
     
     if (cell.accessoryType == UITableViewCellAccessoryNone) {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
-        [self.recipientId addObject:user.objectId];
         [self.recipientId addObject:self.currentUser.objectId];
+        [self.recipientId addObject:user.objectId];
         [self.recipientUser addObject:user[@"surname"]];
     } else {
         cell.accessoryType = UITableViewCellAccessoryNone;
@@ -129,13 +129,6 @@
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range
 replacementString:(NSString *)string {
     NSUInteger newLength = [textField.text length] + [string length] - range.length;
-    
-    if (textField.text.length == 0) {
-        self.questionTextField.textAlignment = NSTextAlignmentCenter;
-    } else {
-        self.questionTextField.textAlignment = NSTextAlignmentLeft;
-    }
-    
     
     return (newLength > 25) ? NO : YES; // 25 is custom value. you can use your own.
 }
@@ -239,6 +232,7 @@ replacementString:(NSString *)string {
 
 - (IBAction)sendEvent:(id)sender {
     if ([self verifications]) {
+        NSLog(@"%@", self.recipientId);
         PFObject *events = [PFObject objectWithClassName:@"Events"];
         [events setObject:self.currentUser.objectId forKey:@"fromUserId"];
         [events setObject:self.currentUser[@"surname"] forKey:@"fromUser"];
@@ -255,8 +249,18 @@ replacementString:(NSString *)string {
                                                                    delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
                 [alertView show];
             } else {
-                AppDelegate *appDelegateTemp = [[UIApplication sharedApplication]delegate];
-                appDelegateTemp.window.rootViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateInitialViewController];
+                NSMutableArray *pushNotifId = self.recipientId;
+                [pushNotifId removeObjectAtIndex:0];
+                [PFCloud callFunctionInBackground:@"pushNotification" withParameters:@{@"userId" : pushNotifId} block:^(id object, NSError *error) {
+                    if (!error) {
+                        NSLog(@"YES");
+                        AppDelegate *appDelegateTemp = [[UIApplication sharedApplication]delegate];
+                        appDelegateTemp.window.rootViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateInitialViewController];
+                    } else {
+                        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Try Again !" message:@"Check your network" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                        [alert show];
+                    }
+                }];
             }
         }];
     }

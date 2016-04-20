@@ -48,14 +48,11 @@
     [self.tableView.backgroundView setContentMode:UIViewContentModeScaleAspectFill];
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     
-    [PFCloud callFunctionInBackground:@"iosPushTest" withParameters:@{@"text" : @"Testing"} block:^(id object, NSError *error) {
-        if (!error) {
-            NSLog(@"YES");
-        } else {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Try Again !" message:@"Check your network" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-            [alert show];
-        }
-    }];
+    // Push Notifications
+    UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound);
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes  categories:nil];
+    [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+    [[UIApplication sharedApplication] registerForRemoteNotifications];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -65,9 +62,9 @@
         [PFUser logOut];
         AppDelegate *appDelegateTemp = [[UIApplication sharedApplication]delegate];
         
-        UIViewController* rootController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"LoginViewController"];
+        UIViewController *rootController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"LoginViewController"];
         
-        UINavigationController* navigation = [[UINavigationController alloc] initWithRootViewController:rootController];
+        UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:rootController];
         appDelegateTemp.window.rootViewController = navigation;
         [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"logged"];
     } else {
@@ -78,10 +75,6 @@
 #pragma mark - Table view data source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
-}
-
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    [cell setBackgroundColor:[UIColor clearColor]];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
