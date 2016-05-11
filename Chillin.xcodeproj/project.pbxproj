@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2CA57BEF1CE224030085A960 /* Wolf-in-the-City.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CA57BEE1CE224010085A960 /* Wolf-in-the-City.ttf */; };
 		2CCE00111C9D954900A5C164 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE00101C9D954900A5C164 /* main.m */; };
 		2CCE001A1C9D954900A5C164 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CCE00181C9D954900A5C164 /* Main.storyboard */; };
 		2CCE001D1C9D954900A5C164 /* Chillin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE001B1C9D954900A5C164 /* Chillin.xcdatamodeld */; };
@@ -55,6 +56,8 @@
 
 /* Begin PBXFileReference section */
 		2B29F4D3F2A0DA78D54C85C5 /* Pods-Chillin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chillin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chillin/Pods-Chillin.debug.xcconfig"; sourceTree = "<group>"; };
+		2CA57BE91CE219910085A960 /* CustomFonts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomFonts.h; sourceTree = "<group>"; };
+		2CA57BEE1CE224010085A960 /* Wolf-in-the-City.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Wolf-in-the-City.ttf"; sourceTree = "<group>"; };
 		2CCE000C1C9D954900A5C164 /* Chillin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chillin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CCE00101C9D954900A5C164 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2CCE00191C9D954900A5C164 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -191,6 +194,7 @@
 		2CCE000F1C9D954900A5C164 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2CA57BEE1CE224010085A960 /* Wolf-in-the-City.ttf */,
 				2CCE00231C9D954900A5C164 /* Info.plist */,
 				2CCE00101C9D954900A5C164 /* main.m */,
 				2CCE004B1C9D960B00A5C164 /* SevenSwitch.swift */,
@@ -228,6 +232,7 @@
 				2CCE005A1C9D971F00A5C164 /* Screen.m */,
 				2CCE005B1C9D971F00A5C164 /* StringFromDateTranslate.h */,
 				2CCE005C1C9D971F00A5C164 /* StringFromDateTranslate.m */,
+				2CA57BE91CE219910085A960 /* CustomFonts.h */,
 				2CCE005D1C9D971F00A5C164 /* UIColor+CustomColors.h */,
 				2CCE005E1C9D971F00A5C164 /* UIColor+CustomColors.m */,
 			);
@@ -436,6 +441,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CA57BEF1CE224030085A960 /* Wolf-in-the-City.ttf in Resources */,
 				2CCE001F1C9D954900A5C164 /* Assets.xcassets in Resources */,
 				2CCE00481C9D95C000A5C164 /* LaunchScreen.xib in Resources */,
 				2CCE001A1C9D954900A5C164 /* Main.storyboard in Resources */,

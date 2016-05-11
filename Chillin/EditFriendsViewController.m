@@ -193,7 +193,6 @@
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     
     if (self.segment.selectedSegmentIndex == 0) {
-        NSArray *sourceData = (self.searchResults.count > 0 ? self.searchResults : self.allUsers);
         self.tableView.userInteractionEnabled = NO;
         PFUser *selected = (self.searchResults.count > 0 ? [self.searchResults objectAtIndex:indexPath.row] : [self.allUsers objectAtIndex:indexPath.row]);
         

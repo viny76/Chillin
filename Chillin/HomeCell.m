@@ -1,6 +1,6 @@
 //
 //  HomeCell.m
-//  ChillN
+//  Chillin
 //
 //  Created by Vincent Jardel on 26/03/2015.
 //  Copyright (c) 2015 ChillCompany. All rights reserved.
@@ -12,41 +12,40 @@
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self)
-    {
+    if (self) {
         // Initialization code
     }
     return self;
-}
-
-- (void)layoutSubviews {
-    //    self.cellView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
-    //    self.cellView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.0];
-    //    self.cellView.opaque = NO;
-    //    self.cellView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
-    
-    //    UIImage *bg     =   SomeImage();
-    //    UIColor *bgc    =   [UIColor colorWithPatternImage:bg alfa:0.5];
-    //    [self setBackgroundColor:bgc];
-//    [self.background setImage:[UIImage imageNamed:@"background"]];
-    self.background.opaque = YES;
-//    [self.background setAlpha:0.5];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 }
 
-- (void)cellOnTableView:(UITableView *)tableView didScrollOnView:(UIView *)view {
-    CGRect rectInSuperview = [tableView convertRect:self.frame toView:view];
+- (IBAction)yesPressed:(id)sender {
+    [UIView animateWithDuration:0.5f animations:^{
+        self.yesButton.selected = YES;
+        self.yesButton.transform = CGAffineTransformMakeScale(6, 6);
+    } completion:nil];
     
-    float distanceFromCenter = CGRectGetHeight(view.frame)/2 - CGRectGetMinY(rectInSuperview);
-    float difference = CGRectGetHeight(self.background.frame) - CGRectGetHeight(self.frame);
-    float move = (distanceFromCenter / CGRectGetHeight(view.frame)) * difference;
+    // for zoom out
+    [UIView animateWithDuration:0.5f animations:^{
+        self.yesButton.transform = CGAffineTransformMakeScale(1, 1);
+    }];
+    self.noButton.selected = NO;
+}
+
+- (IBAction)noPressed:(id)sender {
+    [UIView animateWithDuration:0.5f animations:^{
+        self.noButton.selected = YES;
+        self.noButton.transform = CGAffineTransformMakeScale(6, 6);
+    } completion:nil];
     
-    CGRect imageRect = self.background.frame;
-    imageRect.origin.y = -(difference/2)+move;
-    self.background.frame = imageRect;
+    // for zoom out
+    [UIView animateWithDuration:0.5f animations:^{
+        self.noButton.transform = CGAffineTransformMakeScale(1, 1);
+    }];
+    self.yesButton.selected = NO;
 }
 
 @end

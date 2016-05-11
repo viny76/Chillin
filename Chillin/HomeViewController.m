@@ -12,6 +12,7 @@
 #import <Parse/Parse.h>
 #import "AddEventsViewController.h"
 #import "EventDetailViewController.h"
+#import "CustomFonts.h"
 #import <AddressBook/AddressBook.h>
 
 @interface HomeViewController() <UIScrollViewDelegate>
@@ -35,8 +36,6 @@
     //reloadEvents
     self.currentUser = [PFUser currentUser];
     self.friendsRelation = [[PFUser currentUser] relationForKey:@"friends"];
-    NSLog(@"%@", self.currentUser);
-    NSLog(@"%@", self.friendsRelation);
     
     refreshControl = [[UIRefreshControl alloc]init];
     refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Last Refresh: 5min"];
@@ -84,19 +83,28 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"parallaxCell";
     HomeCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    cell.titleLabel.text = [NSString stringWithFormat:@"%@", [self.mutableEvents objectAtIndex:indexPath.row ]];
-    cell.subtitleLabel.text = [NSString stringWithFormat:@"%@", [self.mutableAuthor objectAtIndex:indexPath.row ]];
+    
+    cell.titleLabel.text = [NSString stringWithFormat:@"%@", [self.mutableEvents objectAtIndex:indexPath.row]];
+    cell.subtitleLabel.text = [NSString stringWithFormat:@"%@", [self.mutableAuthor objectAtIndex:indexPath.row]];
     cell.yesButton.tag = indexPath.row;
+    cell.noButton.tag = indexPath.row;
+    
+    if ([[[self.events valueForKey:@"acceptedUser"] objectAtIndex:indexPath.row] containsObject:[self.currentUser objectForKey:@"surname"]]) {
+        cell.yesButton.selected = YES;
+        cell.noButton.selected = NO;
+    } else if ([[[self.events valueForKey:@"refusedUser"] objectAtIndex:indexPath.row] containsObject:[self.currentUser objectForKey:@"surname"]]) {
+        cell.yesButton.selected = NO;
+        cell.noButton.selected = YES;
+    } else {
+        cell.yesButton.selected = NO;
+        cell.noButton.selected = NO;
+    }
     
     return cell;
 }
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    // Get visible cells on table view.
-    NSArray *visibleCells = [self.tableView visibleCells];
-    for (HomeCell *cell in visibleCells) {
-        [cell cellOnTableView:self.tableView didScrollOnView:self.view];
-    }
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    [cell setBackgroundColor:[UIColor clearColor]];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -110,14 +118,12 @@
     [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
         if (!error) {
             if ([[object valueForKey:@"acceptedUser"] containsObject:[self.currentUser objectForKey:@"surname"]]) {
-                NSLog(@"Already added");
+            } else if ([[object valueForKey:@"refusedUser"] containsObject:[self.currentUser objectForKey:@"surname"]]) {
+                
+                [object addObject:[self.currentUser objectForKey:@"surname"] forKey:@"acceptedUser"];
+                [object removeObject:[self.currentUser objectForKey:@"surname"] forKey:@"refusedUser"];
             } else {
-                if ([[object valueForKey:@"refusedUser"] containsObject:[self.currentUser objectForKey:@"surname"]]) {
-                    [object addObject:[self.currentUser objectForKey:@"surname"] forKey:@"acceptedUser"];
-                    [object removeObject:[self.currentUser objectForKey:@"surname"] forKey:@"refusedUser"];
-                } else {
-                    [object addObject:[self.currentUser objectForKey:@"surname"] forKey:@"acceptedUser"];
-                }
+                [object addObject:[self.currentUser objectForKey:@"surname"] forKey:@"acceptedUser"];
             }
             
             [object saveInBackground];
@@ -133,15 +139,14 @@
     [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
         if (!error) {
             if ([[object valueForKey:@"refusedUser"] containsObject:[self.currentUser objectForKey:@"surname"]]) {
-                NSLog(@"Already added");
-            } else {
-                if ([[object valueForKey:@"acceptedUser"] containsObject:[self.currentUser objectForKey:@"surname"]]) {
-                    [object removeObject:[self.currentUser objectForKey:@"surname"] forKey:@"acceptedUser"];
-                    [object addObject:[self.currentUser objectForKey:@"surname"] forKey:@"refusedUser"];
-                } else {
-                    [object addObject:[self.currentUser objectForKey:@"surname"] forKey:@"refusedUser"];
-                }
+            } else if ([[object valueForKey:@"acceptedUser"] containsObject:[self.currentUser objectForKey:@"surname"]]) {
+                [object removeObject:[self.currentUser objectForKey:@"surname"] forKey:@"acceptedUser"];
+                [object addObject:[self.currentUser objectForKey:@"surname"] forKey:@"refusedUser"];
             }
+            else {
+                [object addObject:[self.currentUser objectForKey:@"surname"] forKey:@"refusedUser"];
+            }
+            
             
             [object saveInBackground];
         } else {

@@ -1,9 +1,8 @@
 //
 //  UIColor+CustomColors.m
-//  Abbvie
+//  Chillin
 //
-//  Created by Jeirgino Ranarivelo on 07/08/2014.
-//  Copyright (c) 2014 Creatiwity. All rights reserved.
+//  Created by Viny on 10/05/2016.
 //
 
 #import "UIColor+CustomColors.h"

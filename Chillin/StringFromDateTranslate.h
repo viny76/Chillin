@@ -1,9 +1,8 @@
 //
 //  stringFromDateTranslate.h
-//  Abbvie
+//  Chillin
 //
-//  Created by Vincent Jardel on 15/12/2015.
-//  Copyright © 2015 Creatiwity. All rights reserved.
+//  Created by Viny on 10/05/2016.
 //
 
 #import <Foundation/Foundation.h>
