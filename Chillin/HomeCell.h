@@ -15,6 +15,4 @@
 @property (strong, nonatomic) IBOutlet UIButton *yesButton;
 @property (strong, nonatomic) IBOutlet UIButton *noButton;
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier withBool:(NSString *)cellTitle;
-
 @end

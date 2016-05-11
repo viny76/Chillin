@@ -97,7 +97,7 @@ BOOL notificationOn = NO;
                 SwitchTableViewCell *switchCell = [tableView dequeueReusableCellWithIdentifier:@"SwitchCell" forIndexPath:indexPath];
                 
                 switchCell.cellLabel.text = @"Notifications";
-                [switchCell.cellSwitch addTarget:self action:@selector(setChangeSwitch:) forControlEvents:UIControlEventValueChanged];
+//                [switchCell.cellSwitch addTarget:self action:@selector(setChangeSwitch:) forControlEvents:UIControlEventValueChanged];
                 
                 cell = switchCell;
             } else {

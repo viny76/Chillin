@@ -9,10 +9,10 @@
 #import "HomeViewController.h"
 #import "HomeCell.h"
 #import "AppDelegate.h"
-#import <Parse/Parse.h>
 #import "AddEventsViewController.h"
 #import "EventDetailViewController.h"
 #import "CustomFonts.h"
+#import "Screen.h"
 #import <AddressBook/AddressBook.h>
 
 @interface HomeViewController() <UIScrollViewDelegate>
@@ -22,6 +22,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // Navigation bar
+    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]]; // this will change the back button tint
+    [self.navigationController.navigationBar setBarTintColor:[UIColor colorChillin]];
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    
     self.tableView.allowsMultipleSelectionDuringEditing = NO;
     
     PFQuery *friendsQuery = [self.friendsRelation query];
@@ -52,6 +57,8 @@
     UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes  categories:nil];
     [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
     [[UIApplication sharedApplication] registerForRemoteNotifications];
+    
+    NSLog(@"%f", [Screen height]);
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -78,6 +85,17 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.mutableEvents.count;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    // iPhone 6
+    if ([Screen height] > 568) {
+        return ([Screen height]-self.navigationController.navigationBar.frame.size.height-20)/6;
+    } else if ([Screen height] == 568) {
+        return ([Screen height]-self.navigationController.navigationBar.frame.size.height-20)/4;
+    } else {
+        return ([Screen height]-self.navigationController.navigationBar.frame.size.height-20)/4;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

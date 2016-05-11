@@ -11,7 +11,7 @@
 @implementation SwitchTableViewCell
 
 - (void)awakeFromNib {
-    [self.cellSwitch setOnTintColor:[UIColor colorPrimaryButton]];
+    [self.cellSwitch setOnTintColor:[UIColor colorBlueButton]];
 }
 
 @end

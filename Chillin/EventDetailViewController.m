@@ -25,6 +25,17 @@
             self.participants = [self.event valueForKey:@"acceptedUser"];
             self.allParticipants = [self.event valueForKey:@"toUser"];
             self.refusedParticipants = [self.event valueForKey:@"refusedUser"];
+            
+            if ([[self.event valueForKey:@"acceptedUser"] containsObject:[self.currentUser objectForKey:@"surname"]]) {
+                self.yesButton.selected = YES;
+                self.noButton.selected = NO;
+            } else if ([[self.event valueForKey:@"refusedUser"] containsObject:[self.currentUser objectForKey:@"surname"]]) {
+                self.yesButton.selected = NO;
+                self.noButton.selected = YES;
+            } else {
+                self.yesButton.selected = NO;
+                self.noButton.selected = NO;
+            }
             [self.tableView reloadData];
         } else {
             NSLog(@"Error");
@@ -112,7 +123,6 @@
         cell.textLabel.text = [NSString stringWithFormat:@"%@", [self.refusedParticipants objectAtIndex:indexPath.row ]];
     }
     
-    
     return cell;
 }
 
@@ -124,26 +134,25 @@
 }
 
 - (IBAction)yesButton:(id)sender {
+    self.yesButton.selected = YES;
+    self.noButton.selected = NO;
     PFQuery *query = [PFQuery queryWithClassName:@"Events"];
     [query whereKey:@"objectId" equalTo:[self.event objectId]];
     [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
         if (!error) {
             if ([[object valueForKey:@"acceptedUser"] containsObject:[self.currentUser objectForKey:@"surname"]]) {
                 NSLog(@"Already added");
-            } else {
-                if ([[object valueForKey:@"refusedUser"] containsObject:[self.currentUser objectForKey:@"surname"]]) {
+            } else if ([[object valueForKey:@"refusedUser"] containsObject:[self.currentUser objectForKey:@"surname"]]) {
                     [object addObject:[self.currentUser objectForKey:@"surname"] forKey:@"acceptedUser"];
                     [object removeObject:[self.currentUser objectForKey:@"surname"] forKey:@"refusedUser"];
-                    [self reloadEvent];
                 } else {
                     [object addObject:[self.currentUser objectForKey:@"surname"] forKey:@"acceptedUser"];
-                    [self reloadEvent];
-                }
             }
             
             [object saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
                 if (succeeded) {
                     [self reloadEvent];
+                    [self.tableView reloadData];
                 }
             }];
         } else {
@@ -153,6 +162,8 @@
 }
 
 - (IBAction)noButton:(id)sender {
+    self.yesButton.selected = NO;
+    self.noButton.selected = YES;
     PFQuery *query = [PFQuery queryWithClassName:@"Events"];
     [query whereKey:@"objectId" equalTo:[self.event objectId]];
     [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
@@ -171,6 +182,7 @@
             [object saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
                 if (succeeded) {
                     [self reloadEvent];
+                    [self.tableView reloadData];
                 }
             }];
         } else {

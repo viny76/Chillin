@@ -37,8 +37,8 @@
     // Add a bottomBorder.
     CALayer *bottomBorder = [CALayer layer];
     bottomBorder.backgroundColor = [[UIColor colorBorder] CGColor];
-    bottomBorder.frame = CGRectMake(0, self.questionTextField.bounds.size.height + self.navigationController.navigationBar.frame.size.height, self.questionTextField.frame.size.width, 1.0f);
-    [self.questionTextField.layer addSublayer:bottomBorder];
+    bottomBorder.frame = CGRectMake(0, self.questionTextField.bounds.size.height, self.questionTextField.frame.size.width, 1.0f);
+    [self.headerView.layer addSublayer:bottomBorder];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
@@ -117,11 +117,6 @@
     return Localized(@"headerSectionFriend");
 }
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    [self.questionTextField resignFirstResponder];
-    return YES;
-}
-
 - (void)dismissKeyboard {
     [self.questionTextField resignFirstResponder];
 }
@@ -130,7 +125,15 @@
 replacementString:(NSString *)string {
     NSUInteger newLength = [textField.text length] + [string length] - range.length;
     
-    return (newLength > 25) ? NO : YES; // 25 is custom value. you can use your own.
+    return (newLength > 30) ? NO : YES; // 30 is custom value. you can use your own.
+}
+
+-(void)textFieldDidBeginEditing:(UITextField *)textField{
+    textField.textAlignment = NSTextAlignmentLeft;
+}
+
+-(void)textFieldDidEndEditing:(UITextField *)textField{
+    textField.textAlignment = NSTextAlignmentCenter;
 }
 
 - (IBAction)showDatePicker:(id)sender {

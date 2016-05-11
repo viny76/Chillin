@@ -23,5 +23,7 @@
 @property(nonatomic, strong) NSArray *participants;
 @property(nonatomic, strong) NSArray *refusedParticipants;
 @property (strong, nonatomic) IBOutlet UIView *questionView;
+@property (strong, nonatomic) IBOutlet UIButton *yesButton;
+@property (strong, nonatomic) IBOutlet UIButton *noButton;
 
 @end
