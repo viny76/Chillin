@@ -57,8 +57,6 @@
     UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes  categories:nil];
     [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
     [[UIApplication sharedApplication] registerForRemoteNotifications];
-    
-    NSLog(@"%f", [Screen height]);
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -90,11 +88,9 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     // iPhone 6
     if ([Screen height] > 568) {
-        return ([Screen height]-self.navigationController.navigationBar.frame.size.height-20)/6;
-    } else if ([Screen height] == 568) {
-        return ([Screen height]-self.navigationController.navigationBar.frame.size.height-20)/4;
+        return ([Screen height]-self.navigationController.navigationBar.frame.size.height-[UIApplication sharedApplication].statusBarFrame.size.height)/6;
     } else {
-        return ([Screen height]-self.navigationController.navigationBar.frame.size.height-20)/4;
+        return ([Screen height]-self.navigationController.navigationBar.frame.size.height-[UIApplication sharedApplication].statusBarFrame.size.height)/4;
     }
 }
 
