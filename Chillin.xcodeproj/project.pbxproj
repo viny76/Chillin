@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C17E79B1CEB28170048C181 /* LaunchScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C17E79A1CEB28170048C181 /* LaunchScreen.m */; };
 		2CA57BEF1CE224030085A960 /* Wolf-in-the-City.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CA57BEE1CE224010085A960 /* Wolf-in-the-City.ttf */; };
 		2CCE00111C9D954900A5C164 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE00101C9D954900A5C164 /* main.m */; };
 		2CCE001A1C9D954900A5C164 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CCE00181C9D954900A5C164 /* Main.storyboard */; };
@@ -56,6 +57,8 @@
 
 /* Begin PBXFileReference section */
 		2B29F4D3F2A0DA78D54C85C5 /* Pods-Chillin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chillin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chillin/Pods-Chillin.debug.xcconfig"; sourceTree = "<group>"; };
+		2C17E7991CEB28170048C181 /* LaunchScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchScreen.h; sourceTree = "<group>"; };
+		2C17E79A1CEB28170048C181 /* LaunchScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchScreen.m; sourceTree = "<group>"; };
 		2CA57BE91CE219910085A960 /* CustomFonts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomFonts.h; sourceTree = "<group>"; };
 		2CA57BEE1CE224010085A960 /* Wolf-in-the-City.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Wolf-in-the-City.ttf"; sourceTree = "<group>"; };
 		2CCE000C1C9D954900A5C164 /* Chillin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chillin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -235,6 +238,8 @@
 				2CA57BE91CE219910085A960 /* CustomFonts.h */,
 				2CCE005D1C9D971F00A5C164 /* UIColor+CustomColors.h */,
 				2CCE005E1C9D971F00A5C164 /* UIColor+CustomColors.m */,
+				2C17E7991CEB28170048C181 /* LaunchScreen.h */,
+				2C17E79A1CEB28170048C181 /* LaunchScreen.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -535,6 +540,7 @@
 				2CCE006B1C9D974600A5C164 /* AddEventsViewController.m in Sources */,
 				2CCE004C1C9D960B00A5C164 /* SevenSwitch.swift in Sources */,
 				2CCE00741C9D975500A5C164 /* HomeCell.m in Sources */,
+				2C17E79B1CEB28170048C181 /* LaunchScreen.m in Sources */,
 				2CCE00731C9D975500A5C164 /* HomeViewController.m in Sources */,
 				2CCE00771C9D975C00A5C164 /* LoginViewController.m in Sources */,
 				2CCE00821C9D976A00A5C164 /* ButtonTableViewCell.m in Sources */,

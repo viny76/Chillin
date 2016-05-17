@@ -1,6 +1,7 @@
 PODS:
   - ActionSheetPicker-3.0 (2.0.5)
   - Bolts/Tasks (1.6.0)
+  - CBZSplashView (1.0.0)
   - HSDatePickerViewController (1.0.4)
   - libPhoneNumber-iOS (0.8.11)
   - MBProgressHUD (0.9.2)
@@ -10,6 +11,7 @@ PODS:
 
 DEPENDENCIES:
   - ActionSheetPicker-3.0 (~> 2.0.5)
+  - CBZSplashView (~> 1.0.0)
   - HSDatePickerViewController (~> 1.0)
   - libPhoneNumber-iOS (~> 0.8)
   - MBProgressHUD (~> 0.9.2)
@@ -19,6 +21,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   ActionSheetPicker-3.0: 8312778b6815578e6a86d630fbcf31dc94c534e7
   Bolts: f52a250053bb517ca874523c3913776359ab3def
+  CBZSplashView: 9ce4cba22024476ff4a97d6433e7347da6376016
   HSDatePickerViewController: 5a72b71f8c3b10e76f2c28a898f8572b551432a6
   libPhoneNumber-iOS: ded33fab2c51ee847979556aa504c9e70f32d703
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1

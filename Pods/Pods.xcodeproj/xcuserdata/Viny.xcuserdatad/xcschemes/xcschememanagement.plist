@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>CBZSplashView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>HSDatePickerViewController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,17 +52,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0CA98EC7780B2F4EA78215F765873195</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>230F06C649365BFB9A3B54AAE6CD35CE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5365ADC467DF089D2648E8CE2C92113C</key>
+		<key>37A734F0E7979AE6B6B58EEEEBA1D37F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4F5E891BB114FD7D0CEE62EA8B4D0AF4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>94D178AF9E1805164C4CA98D839E3B8C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

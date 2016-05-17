@@ -86,6 +86,7 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Chillin/ActionSheetPicker_3_0.framework"
   install_framework "Pods-Chillin/Bolts.framework"
+  install_framework "Pods-Chillin/CBZSplashView.framework"
   install_framework "Pods-Chillin/HSDatePickerViewController.framework"
   install_framework "Pods-Chillin/MBProgressHUD.framework"
   install_framework "Pods-Chillin/Parse.framework"
@@ -95,6 +96,7 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Chillin/ActionSheetPicker_3_0.framework"
   install_framework "Pods-Chillin/Bolts.framework"
+  install_framework "Pods-Chillin/CBZSplashView.framework"
   install_framework "Pods-Chillin/HSDatePickerViewController.framework"
   install_framework "Pods-Chillin/MBProgressHUD.framework"
   install_framework "Pods-Chillin/Parse.framework"
