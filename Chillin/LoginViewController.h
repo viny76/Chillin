@@ -11,8 +11,6 @@
 #import "AppDelegate.h"
 #import "MBProgressHUD.h"
 #import "TPKeyboardAvoidingScrollView.h"
-#import "CBZSplashView.h"
-#import "UIColor+CustomColors.h"
 
 @interface LoginViewController : UIViewController
 
@@ -20,7 +18,6 @@
 @property (strong, nonatomic) IBOutlet UITextField *passwordField;
 @property (weak, nonatomic) IBOutlet UIView *backgroundImageView;
 @property (nonatomic, strong) MBProgressHUD *hud;
-@property (nonatomic, strong) CBZSplashView *splashView;
 
 - (IBAction)login;
 

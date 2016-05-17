@@ -15,6 +15,9 @@
 #import "Screen.h"
 #import <AddressBook/AddressBook.h>
 
+#import "CBZSplashView.h"
+#import "UIColor+CustomColors.h"
+
 @interface HomeViewController() <UIScrollViewDelegate>
 @end
 
@@ -57,6 +60,14 @@
     UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes  categories:nil];
     [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
     [[UIApplication sharedApplication] registerForRemoteNotifications];
+    
+    UIImage *icon = [UIImage imageNamed:@"AppIcon"];
+    CBZSplashView *splashView = [CBZSplashView splashViewWithIcon:icon backgroundColor:[UIColor colorChillin]];
+    
+    // customize duration, icon size, or icon color here;
+    splashView.animationDuration = 1.4;
+    [self.view addSubview:splashView];
+    [splashView startAnimation];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
