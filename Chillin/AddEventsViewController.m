@@ -9,7 +9,7 @@
 #import "AddEventsViewController.h"
 #import "Chillin-Swift.h"
 
-@interface AddEventsViewController () <UIScrollViewDelegate, HSDatePickerViewControllerDelegate>
+@interface AddEventsViewController () <UIScrollViewDelegate, UITextFieldDelegate, HSDatePickerViewControllerDelegate>
 
 @end
 
@@ -37,7 +37,7 @@
     // Add a bottomBorder.
     CALayer *bottomBorder = [CALayer layer];
     bottomBorder.backgroundColor = [[UIColor colorBorder] CGColor];
-    bottomBorder.frame = CGRectMake(0, self.questionTextField.bounds.size.height, self.questionTextField.frame.size.width, 1.0f);
+    bottomBorder.frame = CGRectMake(0, 0.66*[Screen height]-self.navigationController.navigationBar.frame.size.height-[UIApplication sharedApplication].statusBarFrame.size.height, [Screen width], 1.0f);
     [self.headerView.layer addSublayer:bottomBorder];
 }
 
@@ -113,8 +113,15 @@
     }
 }
 
--(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection: (NSInteger)section {
-    return Localized(@"headerSectionFriend");
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 18)];
+    /* Create custom view to display section header... */
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 5, tableView.frame.size.width, 18)];
+    [label setFont:[UIFont boldSystemFontOfSize:12]];
+    [label setText:Localized(@"headerSectionFriend")];
+    [view addSubview:label];
+    [view setBackgroundColor:[UIColor colorChillin]];
+    return view;
 }
 
 - (void)dismissKeyboard {
@@ -130,10 +137,19 @@ replacementString:(NSString *)string {
 
 -(void)textFieldDidBeginEditing:(UITextField *)textField{
     textField.textAlignment = NSTextAlignmentLeft;
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"OK" style:UIBarButtonItemStyleDone target:self action:@selector(dismissKeyboard)];
+    self.navigationItem.rightBarButtonItem = rightButton;
 }
 
 -(void)textFieldDidEndEditing:(UITextField *)textField{
     textField.textAlignment = NSTextAlignmentCenter;
+    self.navigationItem.rightBarButtonItem = self.sendEventButton;
+    [textField resignFirstResponder];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
 }
 
 - (IBAction)showDatePicker:(id)sender {
@@ -192,7 +208,6 @@ replacementString:(NSString *)string {
 - (IBAction)scrollToFriend:(id)sender {
     if (!self.selectFriendButton.selected) {
         scrollingProgrammatically = true;
-        //        [self.scrollView scrollRectToVisible:self.friendView.frame animated:YES];
         [self.scrollView setContentOffset:CGPointMake(0, self.friendView.frame.origin.y) animated:YES];
         //            UIView.animateWithDuration(0.1, animations: {
         //                self.gradientViewIphone.alpha = 0.0

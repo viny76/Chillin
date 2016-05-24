@@ -55,12 +55,6 @@
     [self.tableView.backgroundView setContentMode:UIViewContentModeScaleAspectFill];
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     
-    // Push Notifications
-    UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound);
-    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes  categories:nil];
-    [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
-    [[UIApplication sharedApplication] registerForRemoteNotifications];
-    
     UIImage *icon = [UIImage imageNamed:@"AppIcon"];
     CBZSplashView *splashView = [CBZSplashView splashViewWithIcon:icon backgroundColor:[UIColor colorChillin]];
     
@@ -114,16 +108,18 @@
     cell.yesButton.tag = indexPath.row;
     cell.noButton.tag = indexPath.row;
     
-    if ([[[self.events valueForKey:@"acceptedUser"] objectAtIndex:indexPath.row] containsObject:[self.currentUser objectForKey:@"surname"]]) {
-        cell.yesButton.selected = YES;
-        cell.noButton.selected = NO;
-    } else if ([[[self.events valueForKey:@"refusedUser"] objectAtIndex:indexPath.row] containsObject:[self.currentUser objectForKey:@"surname"]]) {
-        cell.yesButton.selected = NO;
-        cell.noButton.selected = YES;
-    } else {
-        cell.yesButton.selected = NO;
-        cell.noButton.selected = NO;
-    }
+        if (![[[self.events valueForKey:@"acceptedUser"] objectAtIndex:indexPath.row] isEqual:[NSNull null]] &&
+            [[[self.events valueForKey:@"acceptedUser"] objectAtIndex:indexPath.row] containsObject:[self.currentUser objectForKey:@"surname"]]) {
+            cell.yesButton.selected = YES;
+            cell.noButton.selected = NO;
+        } else if (![[[self.events valueForKey:@"refusedUser"] objectAtIndex:indexPath.row] isEqual:[NSNull null]] &&
+                   [[[self.events valueForKey:@"refusedUser"] objectAtIndex:indexPath.row] containsObject:[self.currentUser objectForKey:@"surname"]]) {
+            cell.yesButton.selected = NO;
+            cell.noButton.selected = YES;
+        } else {
+            cell.yesButton.selected = NO;
+            cell.noButton.selected = NO;
+        }
     
     return cell;
 }

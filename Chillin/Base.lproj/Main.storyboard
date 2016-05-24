@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4kT-WE-ZhY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4kT-WE-ZhY">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -229,49 +229,60 @@
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ask" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="olM-ir-kw8">
                                                         <rect key="frame" x="10" y="0.0" width="300" height="294"/>
                                                         <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" returnKeyType="done"/>
                                                         <connections>
                                                             <outlet property="delegate" destination="Pal-Ec-zSM" id="Q4S-9a-PPO"/>
                                                         </connections>
                                                     </textField>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yY3-TM-o46">
-                                                        <rect key="frame" x="10" y="294" width="80" height="30"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                        <state key="normal" title="Select Date">
-                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="showDatePicker:" destination="Pal-Ec-zSM" eventType="touchUpInside" id="2K3-Ud-F5m"/>
-                                                        </connections>
-                                                    </button>
-                                                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="dIp-6H-1ui" customClass="SevenSwitch" customModule="Chillin">
-                                                        <rect key="frame" x="10" y="334" width="70" height="30"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="POj-cg-WSe">
+                                                        <rect key="frame" x="0.0" y="294" width="320" height="146"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yY3-TM-o46">
+                                                                <rect key="frame" x="10" y="20" width="80" height="30"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                <state key="normal" title="Select Date">
+                                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="showDatePicker:" destination="Pal-Ec-zSM" eventType="touchUpInside" id="2K3-Ud-F5m"/>
+                                                                </connections>
+                                                            </button>
+                                                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="dIp-6H-1ui" customClass="SevenSwitch" customModule="Chillin">
+                                                                <rect key="frame" x="10" y="60" width="70" height="30"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="70" id="GWb-4i-x3X"/>
+                                                                    <constraint firstAttribute="height" constant="30" id="bSv-ym-mou"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="activeColor">
+                                                                        <color key="value" red="0.34901960780000002" green="0.98823529409999999" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="image" keyPath="onImage" value="eye"/>
+                                                                    <userDefinedRuntimeAttribute type="color" keyPath="inactiveColor">
+                                                                        <color key="value" red="0.97647064920000004" green="0.054901964960000001" blue="0.10588236149999999" alpha="1" colorSpace="deviceRGB"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="on" value="YES"/>
+                                                                    <userDefinedRuntimeAttribute type="image" keyPath="offImage" value="icon_x"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </view>
+                                                        </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="70" id="GWb-4i-x3X"/>
-                                                            <constraint firstAttribute="height" constant="30" id="bSv-ym-mou"/>
+                                                            <constraint firstItem="yY3-TM-o46" firstAttribute="leading" secondItem="POj-cg-WSe" secondAttribute="leading" constant="10" id="CHR-sI-0xH"/>
+                                                            <constraint firstItem="dIp-6H-1ui" firstAttribute="leading" secondItem="POj-cg-WSe" secondAttribute="leading" constant="10" id="DWM-ys-zFS"/>
+                                                            <constraint firstItem="yY3-TM-o46" firstAttribute="top" secondItem="POj-cg-WSe" secondAttribute="top" constant="20" id="SGd-VG-8He"/>
+                                                            <constraint firstItem="dIp-6H-1ui" firstAttribute="top" secondItem="yY3-TM-o46" secondAttribute="bottom" constant="10" id="eeE-Vt-e5X"/>
                                                         </constraints>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="activeColor">
-                                                                <color key="value" red="0.34901960780000002" green="0.98823529409999999" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="image" keyPath="onImage" value="eye"/>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="inactiveColor">
-                                                                <color key="value" red="0.97647064920000004" green="0.054901964960000001" blue="0.10588236149999999" alpha="1" colorSpace="deviceRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="on" value="YES"/>
-                                                            <userDefinedRuntimeAttribute type="image" keyPath="offImage" value="icon_x"/>
-                                                        </userDefinedRuntimeAttributes>
                                                     </view>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstItem="dIp-6H-1ui" firstAttribute="leading" secondItem="dzk-On-LPL" secondAttribute="leading" constant="10" id="H21-Po-qOw"/>
-                                                    <constraint firstItem="yY3-TM-o46" firstAttribute="leading" secondItem="dzk-On-LPL" secondAttribute="leading" constant="10" id="M1b-Dh-91q"/>
+                                                    <constraint firstItem="POj-cg-WSe" firstAttribute="top" secondItem="olM-ir-kw8" secondAttribute="bottom" id="2F3-LB-cFP"/>
+                                                    <constraint firstItem="POj-cg-WSe" firstAttribute="leading" secondItem="dzk-On-LPL" secondAttribute="leading" id="30l-PH-67l"/>
+                                                    <constraint firstAttribute="trailing" secondItem="POj-cg-WSe" secondAttribute="trailing" id="A18-u1-tHt"/>
                                                     <constraint firstItem="olM-ir-kw8" firstAttribute="top" secondItem="dzk-On-LPL" secondAttribute="top" id="QIF-YZ-BFg"/>
                                                     <constraint firstItem="olM-ir-kw8" firstAttribute="height" secondItem="dzk-On-LPL" secondAttribute="height" multiplier="2:3" id="Xg2-L8-6zX"/>
-                                                    <constraint firstItem="dIp-6H-1ui" firstAttribute="top" secondItem="yY3-TM-o46" secondAttribute="bottom" constant="10" id="aes-go-Og1"/>
-                                                    <constraint firstItem="yY3-TM-o46" firstAttribute="top" secondItem="olM-ir-kw8" secondAttribute="bottom" id="bRm-jU-0Gv"/>
                                                     <constraint firstItem="olM-ir-kw8" firstAttribute="leading" secondItem="dzk-On-LPL" secondAttribute="leading" constant="10" id="bY6-ap-eEQ"/>
                                                     <constraint firstAttribute="trailing" secondItem="olM-ir-kw8" secondAttribute="trailing" constant="10" id="gRD-YZ-qUZ"/>
                                                 </constraints>
@@ -382,6 +393,7 @@
                             <constraint firstItem="mXS-uj-O7P" firstAttribute="top" secondItem="3fF-Xl-lIX" secondAttribute="bottom" id="gAJ-qr-19x"/>
                             <constraint firstAttribute="trailing" secondItem="m5q-El-V8u" secondAttribute="trailing" id="lYk-2Z-OBo"/>
                             <constraint firstItem="m5q-El-V8u" firstAttribute="top" secondItem="t4a-d7-6JC" secondAttribute="bottom" id="oAS-vz-Dcj"/>
+                            <constraint firstItem="3fF-Xl-lIX" firstAttribute="top" secondItem="POj-cg-WSe" secondAttribute="bottom" id="oXb-99-l01"/>
                             <constraint firstItem="3fF-Xl-lIX" firstAttribute="top" secondItem="m5q-El-V8u" secondAttribute="bottom" id="sqI-2C-ha7"/>
                         </constraints>
                     </view>
@@ -407,9 +419,12 @@
                         <outlet property="friendView" destination="gn6-1i-61I" id="ua7-7z-9gD"/>
                         <outlet property="headerView" destination="dzk-On-LPL" id="1ja-rF-E0g"/>
                         <outlet property="mySwitch" destination="dIp-6H-1ui" id="AD5-3n-mOu"/>
+                        <outlet property="otherDetailsView" destination="POj-cg-WSe" id="q9K-QC-GwK"/>
                         <outlet property="questionTextField" destination="olM-ir-kw8" id="LuU-2U-IoD"/>
                         <outlet property="scrollView" destination="m5q-El-V8u" id="Fzf-QP-tIk"/>
                         <outlet property="selectFriendButton" destination="KpY-xp-tSo" id="Mdm-81-Fb0"/>
+                        <outlet property="selectFriendView" destination="3fF-Xl-lIX" id="N3k-Eh-eWd"/>
+                        <outlet property="sendEventButton" destination="rXf-e4-dfC" id="G71-RQ-daL"/>
                         <outlet property="tableView" destination="zXf-Rr-jV8" id="Fs5-0S-jn4"/>
                     </connections>
                 </viewController>

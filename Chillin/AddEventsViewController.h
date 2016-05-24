@@ -23,6 +23,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *dateButton;
 @property (strong, nonatomic) IBOutlet SevenSwitch *mySwitch;
 @property (strong, nonatomic) IBOutlet UIButton *selectFriendButton;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *sendEventButton;
 
 @property (strong, nonatomic) NSString *questionString;
 @property (strong, nonatomic) NSArray *friendsList;
@@ -40,5 +41,7 @@
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UIView *headerView;
 @property (strong, nonatomic) IBOutlet UIView *friendView;
+@property (strong, nonatomic) IBOutlet UIView *otherDetailsView;
+@property (strong, nonatomic) IBOutlet UIView *selectFriendView;
 
 @end

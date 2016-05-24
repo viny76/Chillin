@@ -34,6 +34,16 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
         
         self.window.rootViewController = navigation;
     }
+    
+    //Push Notifications
+    UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
+                                                    UIUserNotificationTypeBadge |
+                                                    UIUserNotificationTypeSound);
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes
+                                                                             categories:nil];
+    [application registerUserNotificationSettings:settings];
+    [application registerForRemoteNotifications];
+    
     return YES;
 }
 
@@ -46,6 +56,9 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
     [PFPush handlePush:userInfo];
+    if ([PFUser currentUser].objectId) {
+                self.window.rootViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateInitialViewController];
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

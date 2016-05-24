@@ -61,21 +61,58 @@
     return 0;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection: (NSInteger)section {
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    if (self.segment.selectedSegmentIndex == 1) {
+        BOOL showSection = [[self.sectionedPersonName objectAtIndex:section] count] != 0;
+        // Only show the section title if there are rows in the section
+        return showSection ? 23 : 0;
+    }
+    
+    return 23;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    /* Section header is in 0th index... */
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 18)];
+    /* Create custom view to display section header... */
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 5, tableView.frame.size.width, 18)];
+    [label setFont:[UIFont boldSystemFontOfSize:12]];
+    NSString *string;
+    [view addSubview:label];
+    [view setBackgroundColor:[UIColor colorChillin]];
+    
     if (self.segment.selectedSegmentIndex == 0) {
-        return @"Friend List";
+        string = Localized(@"FriendList");
     }
     else if (self.segment.selectedSegmentIndex == 1) {
         BOOL showSection = [[self.sectionedPersonName objectAtIndex:section] count] != 0;
         // Only show the section title if there are rows in the section
-        return (self.searchResults.count > 0 ? @"Search Friend" : (showSection) ? [[[UILocalizedIndexedCollation currentCollation] sectionTitles] objectAtIndex:section] : nil);
+        string = (self.searchResults.count > 0 ? Localized(@"SearchFriend") : (showSection) ? [[[UILocalizedIndexedCollation currentCollation] sectionTitles] objectAtIndex:section] : nil);
     }
     else if (self.segment.selectedSegmentIndex == 2) {
-        return @"Pending Friends";
+        string = Localized(@"PendingFriend");
     }
     
-    return nil;
+    [label setText:string];
+
+    return view;
 }
+
+//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection: (NSInteger)section {
+//    if (self.segment.selectedSegmentIndex == 0) {
+//        return Localized(@"FriendList");
+//    }
+//    else if (self.segment.selectedSegmentIndex == 1) {
+//        BOOL showSection = [[self.sectionedPersonName objectAtIndex:section] count] != 0;
+//        // Only show the section title if there are rows in the section
+//        return (self.searchResults.count > 0 ? Localized(@"SearchFriend") : (showSection) ? [[[UILocalizedIndexedCollation currentCollation] sectionTitles] objectAtIndex:section] : nil);
+//    }
+//    else if (self.segment.selectedSegmentIndex == 2) {
+//        return Localized(@"PendingFriend");
+//    }
+//    
+//    return nil;
+//}
 
 - (IBAction)segmentedControlIndexChanged {
     if (self.segment.selectedSegmentIndex == 0) {
