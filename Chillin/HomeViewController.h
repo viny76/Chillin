@@ -13,6 +13,7 @@
     UIRefreshControl *refreshControl;
 }
 
+@property (strong, nonatomic) IBOutlet UIButton *eventsButton;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray *events;
 @property (strong, nonatomic) NSArray *eventsTitle;

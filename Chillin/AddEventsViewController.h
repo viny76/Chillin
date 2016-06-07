@@ -43,5 +43,6 @@
 @property (strong, nonatomic) IBOutlet UIView *friendView;
 @property (strong, nonatomic) IBOutlet UIView *otherDetailsView;
 @property (strong, nonatomic) IBOutlet UIView *selectFriendView;
+@property (strong, nonatomic) IBOutlet UIButton *sendButton;
 
 @end

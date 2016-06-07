@@ -198,6 +198,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="eventsButton" destination="jom-A4-uyQ" id="Ujd-g2-NIL"/>
                         <outlet property="tableView" destination="7qE-vV-cWE" id="wTK-9n-JYB"/>
                     </connections>
                 </viewController>
@@ -424,6 +425,7 @@
                         <outlet property="scrollView" destination="m5q-El-V8u" id="Fzf-QP-tIk"/>
                         <outlet property="selectFriendButton" destination="KpY-xp-tSo" id="Mdm-81-Fb0"/>
                         <outlet property="selectFriendView" destination="3fF-Xl-lIX" id="N3k-Eh-eWd"/>
+                        <outlet property="sendButton" destination="VHU-de-x0n" id="pup-Oz-Z5N"/>
                         <outlet property="sendEventButton" destination="rXf-e4-dfC" id="G71-RQ-daL"/>
                         <outlet property="tableView" destination="zXf-Rr-jV8" id="Fs5-0S-jn4"/>
                     </connections>

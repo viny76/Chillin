@@ -128,8 +128,18 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self.tableView deselectRowAtIndexPath:indexPath animated:NO];
+    PFUser *user;
     
-    PFUser *user = [[self.event valueForKey:@"toUser"] objectAtIndex:indexPath.row];
+    if (self.segment.selectedSegmentIndex == 0) {
+        user = [[self.event valueForKey:@"toUser"] objectAtIndex:indexPath.row];
+    }
+    else if (self.segment.selectedSegmentIndex == 1) {
+        user = [[self.event valueForKey:@"acceptedUser"] objectAtIndex:indexPath.row];
+    }
+    else if (self.segment.selectedSegmentIndex == 2) {
+        user = [[self.event valueForKey:@"refusedUser"] objectAtIndex:indexPath.row];
+    }
+    
     NSLog(@"%@", user);
 }
 

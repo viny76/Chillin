@@ -9,14 +9,14 @@
 #import "AddEventsViewController.h"
 #import "Chillin-Swift.h"
 
-@interface AddEventsViewController () <UIScrollViewDelegate, UITextFieldDelegate, HSDatePickerViewControllerDelegate>
-
+@interface AddEventsViewController () <UIScrollViewDelegate, UIAlertViewDelegate, UITextFieldDelegate, HSDatePickerViewControllerDelegate>
 @end
 
 @implementation AddEventsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.sendButton sizeToFit];
     scrollingProgrammatically = false;
     self.currentUser = [PFUser currentUser];
     //Hide Keyboard when tapping other area
@@ -113,7 +113,7 @@
     }
 }
 
--(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 18)];
     /* Create custom view to display section header... */
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 5, tableView.frame.size.width, 18)];
@@ -135,13 +135,13 @@ replacementString:(NSString *)string {
     return (newLength > 30) ? NO : YES; // 30 is custom value. you can use your own.
 }
 
--(void)textFieldDidBeginEditing:(UITextField *)textField{
+- (void)textFieldDidBeginEditing:(UITextField *)textField{
     textField.textAlignment = NSTextAlignmentLeft;
     UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"OK" style:UIBarButtonItemStyleDone target:self action:@selector(dismissKeyboard)];
     self.navigationItem.rightBarButtonItem = rightButton;
 }
 
--(void)textFieldDidEndEditing:(UITextField *)textField{
+- (void)textFieldDidEndEditing:(UITextField *)textField{
     textField.textAlignment = NSTextAlignmentCenter;
     self.navigationItem.rightBarButtonItem = self.sendEventButton;
     [textField resignFirstResponder];
@@ -152,7 +152,7 @@ replacementString:(NSString *)string {
     return YES;
 }
 
-- (IBAction)showDatePicker:(id)sender {
+- (void)showDatePicker:(id)sender {
     HSDatePickerViewController *hsdpvc = [HSDatePickerViewController new];
     hsdpvc.delegate = self;
     [self presentViewController:hsdpvc animated:YES completion:nil];
@@ -192,17 +192,17 @@ replacementString:(NSString *)string {
     PFQuery *query = [self.friendsRelation query];
     [query orderByAscending:@"surname"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-         if (error) {
-             NSLog(@"Error %@ %@", error, [error userInfo]);
-             [self.hud removeFromSuperview];
-         } else {
-             self.friendsList = objects;
-             [self.tableView reloadData];
-             self.navigationItem.rightBarButtonItem.enabled = true;
-             [self.hud removeFromSuperview];
-             self.friendHeight.constant = self.tableView.contentSize.height;
-         }
-     }];
+        if (error) {
+            NSLog(@"Error %@ %@", error, [error userInfo]);
+            [self.hud removeFromSuperview];
+        } else {
+            self.friendsList = objects;
+            [self.tableView reloadData];
+            self.navigationItem.rightBarButtonItem.enabled = true;
+            [self.hud removeFromSuperview];
+            self.friendHeight.constant = self.tableView.contentSize.height;
+        }
+    }];
 }
 
 - (IBAction)scrollToFriend:(id)sender {
@@ -226,26 +226,49 @@ replacementString:(NSString *)string {
     
     // Check Question
     if (self.questionTextField.text.length == 0) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"ERROR" message:@"Question is empty" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:Localized(@"ERROR") message:Localized(@"Question is empty") delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        alert.tag = 100;
         [alert show];
         ok = NO;
     }
     
     // Check Date
     else if ([self.dateButton.titleLabel.text isEqualToString:Localized(@"Select Date")]) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"ERROR" message:@"Select Date" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:Localized(@"ERROR") message:Localized(@"Select Date") delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        alert.tag = 101;
         [alert show];
         ok = NO;
     }
     
     // Check Friend
     else if (self.recipientId.count == 0) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"ERROR" message:@"Select Friend(s)" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:Localized(@"ERROR") message:Localized(@"Select Friend(s)") delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        alert.tag = 102;
         [alert show];
         ok = NO;
     }
     
     return ok;
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (alertView.tag == 100) {
+        if (buttonIndex == 0) {
+            [self.questionTextField becomeFirstResponder];
+        }
+    }
+    else if (alertView.tag == 101) {
+        if (buttonIndex == 0) {
+            [self showDatePicker:self.dateButton];
+        }
+    }
+    else if (alertView.tag == 102) {
+        if (buttonIndex == 0) {
+            scrollingProgrammatically = true;
+            [self.scrollView setContentOffset:CGPointMake(0, self.friendView.frame.origin.y) animated:YES];
+            self.selectFriendButton.selected = true;
+        }
+    }
 }
 
 - (IBAction)sendEvent:(id)sender {

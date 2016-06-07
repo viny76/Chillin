@@ -86,7 +86,6 @@
     }
     else if (self.segment.selectedSegmentIndex == 1) {
         BOOL showSection = [[self.sectionedPersonName objectAtIndex:section] count] != 0;
-        // Only show the section title if there are rows in the section
         string = (self.searchResults.count > 0 ? Localized(@"SearchFriend") : (showSection) ? [[[UILocalizedIndexedCollation currentCollation] sectionTitles] objectAtIndex:section] : nil);
     }
     else if (self.segment.selectedSegmentIndex == 2) {
@@ -97,22 +96,6 @@
 
     return view;
 }
-
-//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection: (NSInteger)section {
-//    if (self.segment.selectedSegmentIndex == 0) {
-//        return Localized(@"FriendList");
-//    }
-//    else if (self.segment.selectedSegmentIndex == 1) {
-//        BOOL showSection = [[self.sectionedPersonName objectAtIndex:section] count] != 0;
-//        // Only show the section title if there are rows in the section
-//        return (self.searchResults.count > 0 ? Localized(@"SearchFriend") : (showSection) ? [[[UILocalizedIndexedCollation currentCollation] sectionTitles] objectAtIndex:section] : nil);
-//    }
-//    else if (self.segment.selectedSegmentIndex == 2) {
-//        return Localized(@"PendingFriend");
-//    }
-//    
-//    return nil;
-//}
 
 - (IBAction)segmentedControlIndexChanged {
     if (self.segment.selectedSegmentIndex == 0) {

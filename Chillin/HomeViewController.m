@@ -29,6 +29,7 @@
     [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]]; // this will change the back button tint
     [self.navigationController.navigationBar setBarTintColor:[UIColor colorChillin]];
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    [self.eventsButton sizeToFit];
     
     self.tableView.allowsMultipleSelectionDuringEditing = NO;
     

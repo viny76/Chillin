@@ -12,6 +12,9 @@
 "Today" = "Aujourd'hui";
 "Set date" = "Confirmer";
 "Back" = "Retour";
+"Question is empty" = "La question est vide";
+"ERROR" = "ERREUR";
+"Select Friend(s)" = "Sélectionner Ami(s)";
 
 // Settings
 "SettingsNotification" = "Réglages";
