@@ -25,12 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Navigation bar
-    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]]; // this will change the back button tint
-    [self.navigationController.navigationBar setBarTintColor:[UIColor colorChillin]];
-    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
-    [self.eventsButton sizeToFit];
-    
+    [self configureAppearance];
     self.tableView.allowsMultipleSelectionDuringEditing = NO;
     
     PFQuery *friendsQuery = [self.friendsRelation query];
@@ -51,18 +46,6 @@
     [refreshControl beginRefreshing];
     [self.tableView addSubview:refreshControl];
     [refreshControl addTarget:self action:@selector(reloadEvents) forControlEvents:UIControlEventValueChanged];
-    
-    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background"]];
-    [self.tableView.backgroundView setContentMode:UIViewContentModeScaleAspectFill];
-    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-    
-    UIImage *icon = [UIImage imageNamed:@"AppIcon"];
-    CBZSplashView *splashView = [CBZSplashView splashViewWithIcon:icon backgroundColor:[UIColor colorChillin]];
-    
-    // customize duration, icon size, or icon color here;
-    splashView.animationDuration = 1.4;
-    [self.view addSubview:splashView];
-    [splashView startAnimation];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -235,6 +218,34 @@
             }
         }];
     }
+}
+
+- (void)configureAppearance {
+    // Navigation bar
+    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]]; // this will change the back button tint
+    [self.navigationController.navigationBar setBarTintColor:[UIColor colorChillin]];
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    
+    
+    self.tableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background"]];
+    [self.tableView.backgroundView setContentMode:UIViewContentModeScaleAspectFill];
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    
+    UIImage *icon = [UIImage imageNamed:@"AppIcon"];
+    CBZSplashView *splashView = [CBZSplashView splashViewWithIcon:icon backgroundColor:[UIColor colorChillin]];
+    
+    // customize duration, icon size, or icon color here;
+    splashView.animationDuration = 1.4;
+    [self.view addSubview:splashView];
+    [splashView startAnimation];
+    
+    self.eventsButton.showsTouchWhenHighlighted = YES;
+    self.eventsButton.contentVerticalAlignment = UIControlContentVerticalAlignmentFill;
+    
+    self.friendsButton.showsTouchWhenHighlighted = YES;
+    self.friendsButton.contentVerticalAlignment = UIControlContentVerticalAlignmentFill;
+    
+    self.menuButton.showsTouchWhenHighlighted = YES;
 }
 
 @end

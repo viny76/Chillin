@@ -14,6 +14,8 @@
 }
 
 @property (strong, nonatomic) IBOutlet UIButton *eventsButton;
+@property (strong, nonatomic) IBOutlet UIButton *friendsButton;
+@property (strong, nonatomic) IBOutlet UIButton *menuButton;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray *events;
 @property (strong, nonatomic) NSArray *eventsTitle;
