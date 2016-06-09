@@ -14,7 +14,6 @@
 #import "CustomFonts.h"
 #import "Screen.h"
 #import <AddressBook/AddressBook.h>
-
 #import "CBZSplashView.h"
 #import "UIColor+CustomColors.h"
 
@@ -239,12 +238,13 @@
     [self.view addSubview:splashView];
     [splashView startAnimation];
     
+    //UIButton in UIBarButtonItem
     self.eventsButton.showsTouchWhenHighlighted = YES;
+    self.eventsButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentFill;
     self.eventsButton.contentVerticalAlignment = UIControlContentVerticalAlignmentFill;
-    
     self.friendsButton.showsTouchWhenHighlighted = YES;
+    self.friendsButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentFill;
     self.friendsButton.contentVerticalAlignment = UIControlContentVerticalAlignmentFill;
-    
     self.menuButton.showsTouchWhenHighlighted = YES;
 }
 
