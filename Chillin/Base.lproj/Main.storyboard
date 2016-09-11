@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4kT-WE-ZhY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4kT-WE-ZhY">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -10,6 +10,12 @@
     <customFonts key="customFonts">
         <mutableArray key="Arial-Regular.ttf">
             <string>ArialMT</string>
+        </mutableArray>
+        <mutableArray key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </mutableArray>
+        <mutableArray key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
         </mutableArray>
         <mutableArray key="Wolf-in-the-City.ttf">
             <string>WolfintheCity</string>
@@ -1165,6 +1171,83 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hiy-z3-idf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1795" y="-685"/>
+        </scene>
+        <!--Terms-->
+        <scene sceneID="p3u-cU-BNO">
+            <objects>
+                <viewController storyboardIdentifier="Terms" title="Terms" id="v7Z-la-pJM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="whp-79-tlz"/>
+                        <viewControllerLayoutGuide type="bottom" id="0uC-pe-6E2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="er9-sG-LsJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ipc-hz-Pvu">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HI3-3D-ZfS" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="632.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms and Conditions for Chillin" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIW-63-y9h">
+                                                <rect key="frame" x="15" y="15" width="570" height="14"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="12"/>
+                                                <color key="textColor" red="0.54117647059999996" green="0.5568627451" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEf-3s-BgG">
+                                                <rect key="frame" x="15" y="44" width="570" height="573.5"/>
+                                                <string key="text">Please read these Terms and Conditions of use carefully before using My IBD passport® App (the “App”).  If you do not agree with these Terms and Conditions, please do not use or access this App.
+
+This App is the property of AbbVie Corporation (“AbbVie”). AbbVie makes no warranties, representations, statements or guarantees (whether express, implied in law or residual) regarding the App or the information you may access through this App. We make no representation that any products or services referred to through this App are appropriate for any use. We do not represent that the information provided through this App is accurate, comprehensive, verified or complete, and shall accept no liability for the accuracy or completeness of the information provided through this App or for any reliance placed by any person on the information. You are responsible for verifying any content of this App before relying on it. You understand and agree that AbbVie and/ or its affiliates shall not be liable for any direct, indirect, incidental, consequential or exemplary damages, including but not limited to, damages for loss of profits, data or other intangible losses (even if AbbVie have been advised of the possibility of such damages), resulting from the use or the inability to use the product(s) and or service(s) or any misuse of the product(s) and or service(s) in a manner not in accordance with their intended use.  The content of this App is provided for informational and educational purposes only and does not, nor is it intended to be construed as medical, legal, or other professional advice. THE INFORMATION AVAILABLE THROUGH THIS APP SHOULD NOT BE USED AS A SUBSTITUTE FOR SEEKING MEDICAL ADVICE OR TREATMENT FROM A PHYSICIAN. YOU SHOULD NOT USE THIS INFORMATION TO DIAGNOSE OR TREAT A MEDICAL CONDITION OR HEALTH PROBLEM. SPEAK WITH A HEALTH CARE PROFESSIONAL IF YOU HAVE ANY QUESTIONS ABOUT YOUR MEDICAL CONDITION, SYMPTOMS OR TREATMENT OPTIONS.
+
+AbbVie makes no warranty that this App will meet your requirements, that use of this App will be uninterrupted, timely, secure or error free, that defects will be corrected or that this App is free of viruses or other harmful components. If your use of this App results in the need for servicing, repair, or connection of devices or data, you assume all costs thereof.
+
+Names, trademarks, trade names, trade dress, logos and products of AbbVie are protected by trademark laws and may not be used for advertising or publicity purposes, or to indicate any affiliation with or endorsement by AbbVie. The display of trademarks and trade names through this App does not imply that a licensee of any kind has been granted to anyone else. Other product, service and company names mentioned by this App are for identification purposes only and may be trademarks of their respective owners.
+
+All software and technology used in connection with this App is the property of AbbVie and protected by Canadian and worldwide copyright laws. Unless otherwise specified, no permission is granted to copy, redistribute, reproduce, republish, store in any medium, re-transmit, modify or make public or commercial use of, in any form, the information provided through this App.
+
+These Terms and Conditions and your use of this App is governed by and construed in accordance with the laws of Quebec, Canada, without giving effect to any principles of conflicts of law.</string>
+                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                                                <color key="textColor" red="0.54117647059999996" green="0.5568627451" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="bIW-63-y9h" secondAttribute="trailing" constant="15" id="KRF-tB-FbC"/>
+                                            <constraint firstAttribute="bottom" secondItem="LEf-3s-BgG" secondAttribute="bottom" constant="15" id="W8B-7k-69N"/>
+                                            <constraint firstItem="bIW-63-y9h" firstAttribute="leading" secondItem="HI3-3D-ZfS" secondAttribute="leading" constant="15" id="f1s-9z-VC4"/>
+                                            <constraint firstItem="bIW-63-y9h" firstAttribute="top" secondItem="HI3-3D-ZfS" secondAttribute="top" constant="15" id="qxh-3Z-Pbz"/>
+                                            <constraint firstItem="LEf-3s-BgG" firstAttribute="leading" secondItem="HI3-3D-ZfS" secondAttribute="leading" constant="15" id="to5-uM-NFA"/>
+                                            <constraint firstItem="LEf-3s-BgG" firstAttribute="top" secondItem="bIW-63-y9h" secondAttribute="bottom" constant="15" id="uUd-Bm-6Mz"/>
+                                            <constraint firstAttribute="trailing" secondItem="LEf-3s-BgG" secondAttribute="trailing" constant="15" id="ums-AW-tNi"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="HI3-3D-ZfS" firstAttribute="leading" secondItem="ipc-hz-Pvu" secondAttribute="leading" id="8U4-hV-br6"/>
+                                    <constraint firstAttribute="bottom" secondItem="HI3-3D-ZfS" secondAttribute="bottom" id="Lf5-59-T6k"/>
+                                    <constraint firstItem="HI3-3D-ZfS" firstAttribute="top" secondItem="ipc-hz-Pvu" secondAttribute="top" id="r5c-Ac-pEb"/>
+                                    <constraint firstAttribute="trailing" secondItem="HI3-3D-ZfS" secondAttribute="trailing" id="vVP-QR-0ce"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="0uC-pe-6E2" firstAttribute="top" secondItem="ipc-hz-Pvu" secondAttribute="bottom" id="hJG-b0-IJi"/>
+                            <constraint firstItem="ipc-hz-Pvu" firstAttribute="top" secondItem="whp-79-tlz" secondAttribute="bottom" id="iCX-Uu-h8U"/>
+                            <constraint firstAttribute="trailing" secondItem="ipc-hz-Pvu" secondAttribute="trailing" id="ouK-H7-FiY"/>
+                            <constraint firstItem="ipc-hz-Pvu" firstAttribute="leading" secondItem="er9-sG-LsJ" secondAttribute="leading" id="tGI-y3-utY"/>
+                            <constraint firstItem="HI3-3D-ZfS" firstAttribute="width" secondItem="er9-sG-LsJ" secondAttribute="width" id="zu1-ZQ-GF5"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Tg-nw-74V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2301" y="-701"/>
         </scene>
     </scenes>
     <resources>

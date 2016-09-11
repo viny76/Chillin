@@ -33,16 +33,16 @@ BOOL notificationOn = NO;
     self.tableView.tableFooterView = footerView;
     
     // Check user notification in settings
-    if ([[UIApplication sharedApplication] respondsToSelector:@selector(currentUserNotificationSettings)]) {
-        // iOS 8+
-        UIUserNotificationSettings *grantedSettings = [[UIApplication sharedApplication] currentUserNotificationSettings];
-        
-        if (grantedSettings.types == UIUserNotificationTypeNone) {
-            notificationOn = NO;
-        } else {
-            notificationOn = YES;
-        }
-    }
+//    if ([[UIApplication sharedApplication] respondsToSelector:@selector(currentUserNotificationSettings)]) {
+//        // iOS 8+
+//        UIUserNotificationSettings *grantedSettings = [[UIApplication sharedApplication] currentUserNotificationSettings];
+//        
+//        if (grantedSettings.types == UIUserNotificationTypeNone) {
+//            notificationOn = NO;
+//        } else {
+//            notificationOn = YES;
+//        }
+//    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -79,9 +79,9 @@ BOOL notificationOn = NO;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section == 0) {
-        return 5;
+        return 1;
     } else if (section == 1) {
-        return 2;
+        return 1;
     }
     
     return 0;
@@ -89,61 +89,63 @@ BOOL notificationOn = NO;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell;
-    float version = [[[UIDevice currentDevice] systemVersion] floatValue];
+//    float version = [[[UIDevice currentDevice] systemVersion] floatValue];
+    
+    ButtonTableViewCell *buttonCell = [tableView dequeueReusableCellWithIdentifier:@"ButtonCell" forIndexPath:indexPath];
     
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
-            if (notificationOn || version < 8.0){
-                SwitchTableViewCell *switchCell = [tableView dequeueReusableCellWithIdentifier:@"SwitchCell" forIndexPath:indexPath];
-                
-                switchCell.cellLabel.text = @"Notifications";
-//                [switchCell.cellSwitch addTarget:self action:@selector(setChangeSwitch:) forControlEvents:UIControlEventValueChanged];
-                
-                cell = switchCell;
-            } else {
-                LabelButtonTableViewCell *labelButtonCell = [tableView dequeueReusableCellWithIdentifier:@"LabelButtonCell" forIndexPath:indexPath];
-                
-                labelButtonCell.cellLabel.text = @"Notifications";
-                [labelButtonCell.cellButton setTitle:Localized(@"SettingsNotification") forState:UIControlStateNormal];
-                [labelButtonCell.cellButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-                labelButtonCell.cellButton.tag = 4;
-                cell = labelButtonCell;
-            }
-        } else if (indexPath.row == 1) {
-            LabelButtonTableViewCell *labelButtonCell = [tableView dequeueReusableCellWithIdentifier:@"LabelButtonCell" forIndexPath:indexPath];
-            
-            labelButtonCell.cellLabel.text = Localized(@"Unit of weight");
-            cell = labelButtonCell;
-        } else if (indexPath.row == 2) {
-            LabelButtonTableViewCell *labelButtonCell = [tableView dequeueReusableCellWithIdentifier:@"LabelButtonCell" forIndexPath:indexPath];
-            
-            labelButtonCell.cellLabel.text = Localized(@"Unit of height");
-            cell = labelButtonCell;
-        }
-        else if (indexPath.row == 3) {
-            LabelButtonTableViewCell *labelButtonCell = [tableView dequeueReusableCellWithIdentifier:@"LabelButtonCell" forIndexPath:indexPath];
-            
-            labelButtonCell.cellLabel.text = Localized(@"Pdf format");
-            cell = labelButtonCell;
-        }
-        else if (indexPath.row == 4) {
-            LabelButtonTableViewCell *labelButtonCell = [tableView dequeueReusableCellWithIdentifier:@"LabelButtonCell" forIndexPath:indexPath];
-            
-            labelButtonCell.cellLabel.text = Localized(@"Language");
-            
-            cell = labelButtonCell;
-        }
-    } else if (indexPath.section == 1) {
-        ButtonTableViewCell *buttonCell = [tableView dequeueReusableCellWithIdentifier:@"ButtonCell" forIndexPath:indexPath];
-        
-        if (indexPath.row == 0) {
             buttonCell.cellLabel.text = Localized(@"Disconnect");
-        } else if (indexPath.row == 1) {
-            buttonCell.cellLabel.text = Localized(@"Terms and conditions");
+            
+//            if (notificationOn || version < 8.0){
+//                SwitchTableViewCell *switchCell = [tableView dequeueReusableCellWithIdentifier:@"SwitchCell" forIndexPath:indexPath];
+//                
+//                switchCell.cellLabel.text = @"Notifications";
+////                [switchCell.cellSwitch addTarget:self action:@selector(setChangeSwitch:) forControlEvents:UIControlEventValueChanged];
+//                
+//                cell = switchCell;
+//            } else {
+//                LabelButtonTableViewCell *labelButtonCell = [tableView dequeueReusableCellWithIdentifier:@"LabelButtonCell" forIndexPath:indexPath];
+//                
+//                labelButtonCell.cellLabel.text = @"Notifications";
+//                [labelButtonCell.cellButton setTitle:Localized(@"SettingsNotification") forState:UIControlStateNormal];
+//                [labelButtonCell.cellButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+//                labelButtonCell.cellButton.tag = 4;
+//                cell = labelButtonCell;
+//            }
+        }
+//        else if (indexPath.row == 1) {
+//            LabelButtonTableViewCell *labelButtonCell = [tableView dequeueReusableCellWithIdentifier:@"LabelButtonCell" forIndexPath:indexPath];
+//            
+//            labelButtonCell.cellLabel.text = Localized(@"Unit of weight");
+//            cell = labelButtonCell;
+//        } else if (indexPath.row == 2) {
+//            LabelButtonTableViewCell *labelButtonCell = [tableView dequeueReusableCellWithIdentifier:@"LabelButtonCell" forIndexPath:indexPath];
+//            
+//            labelButtonCell.cellLabel.text = Localized(@"Unit of height");
+//            cell = labelButtonCell;
+//        }
+//        else if (indexPath.row == 3) {
+//            LabelButtonTableViewCell *labelButtonCell = [tableView dequeueReusableCellWithIdentifier:@"LabelButtonCell" forIndexPath:indexPath];
+//            
+//            labelButtonCell.cellLabel.text = Localized(@"Pdf format");
+//            cell = labelButtonCell;
+//        }
+//        else if (indexPath.row == 4) {
+//            LabelButtonTableViewCell *labelButtonCell = [tableView dequeueReusableCellWithIdentifier:@"LabelButtonCell" forIndexPath:indexPath];
+//            
+//            labelButtonCell.cellLabel.text = Localized(@"Language");
+//            
+//            cell = labelButtonCell;
+//        }
+    } else if (indexPath.section == 1) {
+        if (indexPath.row == 0) {
+            buttonCell.cellLabel.text = Localized(@"Terms and Conditions");
         }
         
-        cell = buttonCell;
+        
     }
+    cell = buttonCell;
     
     return cell;
 }
@@ -176,7 +178,6 @@ BOOL notificationOn = NO;
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     if (indexPath.section == 0) {
-    } else if (indexPath.section) {
         if (indexPath.row == 0) {
             // Disconnect User
             [PFUser logOut];
@@ -187,7 +188,9 @@ BOOL notificationOn = NO;
             UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:rootController];
             appDelegateTemp.window.rootViewController = navigation;
             [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"logged"];
-        } else if (indexPath.row == 1) {
+        }
+    } else if (indexPath.section == 1) {
+        if (indexPath.row == 0) {
             // Launch terms
             UIViewController *termsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Terms"];
             [self.navigationController pushViewController:termsVC animated:YES];
