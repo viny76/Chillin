@@ -90,7 +90,7 @@
 "nm6-it-BvS.text" = "Label";
 
 /* Class = "UITextField"; placeholder = "Ask"; ObjectID = "olM-ir-kw8"; */
-"olM-ir-kw8.placeholder" = "Question à poser";
+"olM-ir-kw8.placeholder" = "Titre de l'événement";
 
 /* Class = "UIViewController"; title = "LoginViewController"; ObjectID = "pTw-fF-wAx"; */
 "pTw-fF-wAx.title" = "LoginViewController";
@@ -115,3 +115,9 @@
 
 /* Class = "UIButton"; normalTitle = "Select Date"; ObjectID = "yY3-TM-o46"; */
 "yY3-TM-o46.normalTitle" = "Choisir Date";
+
+/* Class = "UILabel"; text = "See Guests"; ObjectID = "yUz-VA-wjz"; */
+"yUz-VA-wjz.text" = "Voir les invités";
+
+/* Class = "UILabel"; text = "When"; ObjectID = "zY7-V7-wLW"; */
+"zY7-V7-wLW.text" = "Quand";

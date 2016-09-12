@@ -15,6 +15,9 @@
 "Question is empty" = "La question est vide";
 "ERROR" = "ERREUR";
 "Select Friend(s)" = "Sélectionner Ami(s)";
+"When" = "Quand";
+"Title" = "Titre";
+"See Guests" = "Voir les invités";
 
 // Settings
 "SettingsNotification" = "Réglages";

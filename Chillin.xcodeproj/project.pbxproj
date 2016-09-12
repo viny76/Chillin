@@ -60,11 +60,11 @@
 		2B29F4D3F2A0DA78D54C85C5 /* Pods-Chillin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chillin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chillin/Pods-Chillin.debug.xcconfig"; sourceTree = "<group>"; };
 		2C17E7991CEB28170048C181 /* LaunchScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchScreen.h; sourceTree = "<group>"; };
 		2C17E79A1CEB28170048C181 /* LaunchScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchScreen.m; sourceTree = "<group>"; };
-		2C3F638B1CF44A0700774715 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		2C3F63911CF44AD300774715 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2C3F63921CF44AD700774715 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2CA57BE91CE219910085A960 /* CustomFonts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomFonts.h; sourceTree = "<group>"; };
 		2CA57BEE1CE224010085A960 /* Wolf-in-the-City.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Wolf-in-the-City.ttf"; sourceTree = "<group>"; };
+		2CCA2F751D86138600AF2604 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		2CCE000C1C9D954900A5C164 /* Chillin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chillin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CCE00101C9D954900A5C164 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2CCE00191C9D954900A5C164 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -600,7 +600,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				2CCE00191C9D954900A5C164 /* Base */,
-				2C3F638B1CF44A0700774715 /* fr */,
+				2CCA2F751D86138600AF2604 /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

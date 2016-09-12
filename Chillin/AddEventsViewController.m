@@ -35,10 +35,10 @@
     [self.selectFriendButton setImage:[UIImage imageNamed:@"ChevronBottomBlue"] forState:UIControlStateNormal];
     [self.selectFriendButton setImage:[UIImage imageNamed:@"ChevronUpBlue"] forState:UIControlStateSelected];
     // Add a bottomBorder.
-    CALayer *bottomBorder = [CALayer layer];
-    bottomBorder.backgroundColor = [[UIColor colorBorder] CGColor];
-    bottomBorder.frame = CGRectMake(0, 0.66*[Screen height]-self.navigationController.navigationBar.frame.size.height-[UIApplication sharedApplication].statusBarFrame.size.height, [Screen width], 1.0f);
-    [self.headerView.layer addSublayer:bottomBorder];
+//    CALayer *bottomBorder = [CALayer layer];
+//    bottomBorder.backgroundColor = [[UIColor colorBorder] CGColor];
+//    bottomBorder.frame = CGRectMake(0, 0.66*[Screen height]-self.navigationController.navigationBar.frame.size.height-[UIApplication sharedApplication].statusBarFrame.size.height, [Screen width], 1.0f);
+//    [self.headerView.layer addSublayer:bottomBorder];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
