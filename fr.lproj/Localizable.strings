@@ -21,8 +21,16 @@
 
 // Settings
 "SettingsNotification" = "Réglages";
+"Account" = "Compte";
+"More" = "Plus";
+"Disconnect" = "Se Déconnecter";
+"Terms and Conditions" = "Termes et Conditions";
+
 
 // Edit Friend
 "FriendList" = "Liste d'Amis";
 "PendingFriend" = "Amis en attente";
 "SearchFriend" = "Recherche d'Amis";
+
+// Home
+"Last Refresh: %02.0f:%02.0f:%04.1f" = "Rafraîchit : %02.0f:%02.0f:%04.1f";

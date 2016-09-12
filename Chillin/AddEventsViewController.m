@@ -286,7 +286,7 @@ replacementString:(NSString *)string {
         [events saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             if (error) {
                 UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"An error occurred!"
-                                                                    message:@"Please try sending your message again."
+                                                                    message:@"Please try sending your event again."
                                                                    delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
                 [alertView show];
             } else {

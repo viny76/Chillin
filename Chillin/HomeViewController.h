@@ -27,4 +27,9 @@
 @property(nonatomic,strong) PFObject *selectedEvent;
 @property(nonatomic, strong) NSArray *friends;
 
+// Timer
+@property (nonatomic, strong) NSTimer *timer;
+@property (nonatomic, assign) CFTimeInterval ticks;
+@property (nonatomic, strong) NSString *timerString;
+
 @end

@@ -43,6 +43,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
                                                                              categories:nil];
     [application registerUserNotificationSettings:settings];
     [application registerForRemoteNotifications];
+    application.applicationIconBadgeNumber = 0;
     
     return YES;
 }

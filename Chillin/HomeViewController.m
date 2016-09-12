@@ -36,12 +36,14 @@
         }
     }];
     
+    // Launch Timer
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerTick:) userInfo:nil repeats:YES];
+    
     //reloadEvents
     self.currentUser = [PFUser currentUser];
     self.friendsRelation = [[PFUser currentUser] relationForKey:@"friends"];
     
     refreshControl = [[UIRefreshControl alloc]init];
-    refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Last Refresh: 5min"];
     [refreshControl beginRefreshing];
     [self.tableView addSubview:refreshControl];
     [refreshControl addTarget:self action:@selector(reloadEvents) forControlEvents:UIControlEventValueChanged];
@@ -214,6 +216,9 @@
                 self.mutableAuthor = [[NSMutableArray alloc] initWithArray:self.author];
                 [refreshControl endRefreshing];
                 [self.tableView reloadData];
+                
+                // Restart Timer
+                self.ticks = 0;
             }
         }];
     }
@@ -246,6 +251,27 @@
     self.friendsButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentFill;
     self.friendsButton.contentVerticalAlignment = UIControlContentVerticalAlignmentFill;
     self.menuButton.showsTouchWhenHighlighted = YES;
+}
+
+- (void)timerTick:(NSTimer *)timer {
+    // Timers are not guaranteed to tick at the nominal rate specified, so this isn't technically accurate.
+    // However, this is just an example to demonstrate how to stop some ongoing activity, so we can live with that inaccuracy.
+    self.ticks += 1.0;
+    double seconds = fmod(self.ticks, 60.0);
+    double minutes = fmod(trunc(self.ticks / 60.0), 60.0);
+    double hours = trunc(self.ticks / 3600.0);
+    if (hours != 0) {
+        self.timerString = [NSString stringWithFormat:@"Rafraîchit il y a %2.0fh%02.0f", hours, minutes];
+    } else if (minutes != 0) {
+        if (minutes > 9) {
+            self.timerString = [NSString stringWithFormat:@"Rafraîchit il y a %02.0fmin", minutes];
+        } else {
+            self.timerString = [NSString stringWithFormat:@"Rafraîchit il y a %2.0fmin", minutes];
+        }
+    } else {
+        self.timerString = [NSString stringWithFormat:@"Rafraîchit il y a %2.0fsec", seconds];
+    }
+    refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:self.timerString];
 }
 
 @end
