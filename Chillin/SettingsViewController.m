@@ -181,7 +181,7 @@ BOOL notificationOn = NO;
         if (indexPath.row == 0) {
             // Disconnect User
             [PFUser logOut];
-            AppDelegate *appDelegateTemp = [[UIApplication sharedApplication]delegate];
+            AppDelegate *appDelegateTemp = (AppDelegate*)[[UIApplication sharedApplication]delegate];
             
             UIViewController *rootController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"LoginViewController"];
             

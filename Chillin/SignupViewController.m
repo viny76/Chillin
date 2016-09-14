@@ -63,7 +63,7 @@
                     PFInstallation *currentInstallation = [PFInstallation currentInstallation];
                     [currentInstallation setObject:[PFUser currentUser].objectId forKey: @"userId"];
                     [currentInstallation saveInBackground];
-                    AppDelegate *appDelegateTemp = [[UIApplication sharedApplication]delegate];
+                    AppDelegate *appDelegateTemp = (AppDelegate*)[[UIApplication sharedApplication] delegate];
                     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"logged"];
                     appDelegateTemp.window.rootViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateInitialViewController];
                     

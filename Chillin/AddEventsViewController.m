@@ -292,10 +292,10 @@ replacementString:(NSString *)string {
             } else {
                 NSMutableArray *pushNotifId = self.recipientId;
                 [pushNotifId removeObjectAtIndex:0];
-                [PFCloud callFunctionInBackground:@"pushNotification" withParameters:@{@"userId" : pushNotifId} block:^(id object, NSError *error) {
+                [PFCloud callFunctionInBackground:@"pushEventNotification" withParameters:@{@"userId" : pushNotifId} block:^(id object, NSError *error) {
                     if (!error) {
                         NSLog(@"YES");
-                        AppDelegate *appDelegateTemp = [[UIApplication sharedApplication]delegate];
+                        AppDelegate *appDelegateTemp = (AppDelegate*)[[UIApplication sharedApplication]delegate];
                         appDelegateTemp.window.rootViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateInitialViewController];
                     } else {
                         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Try Again !" message:@"Check your network" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];

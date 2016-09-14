@@ -54,7 +54,7 @@
     [self.navigationController.navigationBar setHidden:NO];
     if (!self.currentUser.objectId) {
         [PFUser logOut];
-        AppDelegate *appDelegateTemp = [[UIApplication sharedApplication]delegate];
+        AppDelegate *appDelegateTemp = (AppDelegate*)[[UIApplication sharedApplication]delegate];
         
         UIViewController *rootController = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"LoginViewController"];
         
