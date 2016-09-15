@@ -11,6 +11,7 @@
 @implementation ButtonTableViewCell
 
 - (void)awakeFromNib {
+    [super awakeFromNib];
     self.cellLabel.textColor = [UIColor colorLabelAndButtonCell];
 }
 

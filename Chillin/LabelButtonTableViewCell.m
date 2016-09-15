@@ -11,6 +11,7 @@
 @implementation LabelButtonTableViewCell
 
 - (void)awakeFromNib {
+    [super awakeFromNib];
     [self.cellButton setTitleColor:[UIColor colorLabelAndButtonCell] forState:UIControlStateNormal];
 }
 
