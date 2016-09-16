@@ -14,7 +14,11 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
+<<<<<<< HEAD
                BlueprintIdentifier = '1D2BBD811A302952E2D56069F782B47F'
+=======
+               BlueprintIdentifier = '084F6920AC2FD7655220A81D4C717AF2'
+>>>>>>> Chillin/master
                BlueprintName = 'Pods-Chillin'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-Chillin.a'>
