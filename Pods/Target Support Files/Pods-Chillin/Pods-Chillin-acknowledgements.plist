@@ -204,14 +204,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>See https://www.parse.com/about/terms</string>
-			<key>Title</key>
-			<string>ParseCrashReporting</string>
-			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-		</dict>
-		<dict>
-			<key>FooterText</key>
 			<string>Copyright (c) 2013 Michael Tyson
 
 This software is provided 'as-is', without any express or implied

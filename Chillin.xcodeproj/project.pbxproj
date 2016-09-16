@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A17887E838B494B2A44D3F9 /* libPods-ChillinTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73E8FE35D4242A5CFADF3AEC /* libPods-ChillinTests.a */; };
 		2C17E79B1CEB28170048C181 /* LaunchScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C17E79A1CEB28170048C181 /* LaunchScreen.m */; };
 		2C3F638E1CF44AC400774715 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C3F63901CF44AC400774715 /* Localizable.strings */; };
 		2CA57BEF1CE224030085A960 /* Wolf-in-the-City.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CA57BEE1CE224010085A960 /* Wolf-in-the-City.ttf */; };
@@ -37,14 +36,9 @@
 		2CCE00851C9D976A00A5C164 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE007F1C9D976A00A5C164 /* SettingsViewController.m */; };
 		2CCE00861C9D976A00A5C164 /* SwitchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE00811C9D976A00A5C164 /* SwitchTableViewCell.m */; };
 		2CCE00891C9D977600A5C164 /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCE00881C9D977600A5C164 /* SignupViewController.m */; };
-<<<<<<< HEAD
-		50EAC9A7929F9989B3516CE4 /* libPods-ChillinUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E76B27325FC1270A038FC02 /* libPods-ChillinUITests.a */; };
-		CACC1DA050364EFF5738C568 /* libPods-Chillin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1AEA0A4E010533C05D6F30A /* libPods-Chillin.a */; };
-=======
 		7EF285CE100B2C4F954D1CF4 /* libPods-ChillinTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E64DD4A68D3C8D7F13C6D9AD /* libPods-ChillinTests.a */; };
 		BA6B26E4CBDF71DF7CADC4EF /* libPods-Chillin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6059517590551EC2BBCAECD6 /* libPods-Chillin.a */; };
 		D8C1992DE3D23A3576B03FEE /* libPods-ChillinUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A4283BA181E6B624FC9471 /* libPods-ChillinUITests.a */; };
->>>>>>> Chillin/master
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,11 +59,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-<<<<<<< HEAD
-=======
 		0FAA27B07A621EAE4D7D791C /* Pods-Chillin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chillin.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chillin/Pods-Chillin.release.xcconfig"; sourceTree = "<group>"; };
 		1CA80568BA56A6E0FADF3749 /* Pods-ChillinUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChillinUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChillinUITests/Pods-ChillinUITests.debug.xcconfig"; sourceTree = "<group>"; };
->>>>>>> Chillin/master
 		2C17E7991CEB28170048C181 /* LaunchScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchScreen.h; sourceTree = "<group>"; };
 		2C17E79A1CEB28170048C181 /* LaunchScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchScreen.m; sourceTree = "<group>"; };
 		2C3F63911CF44AD300774715 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -128,17 +119,6 @@
 		2CCE00811C9D976A00A5C164 /* SwitchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchTableViewCell.m; sourceTree = "<group>"; };
 		2CCE00871C9D977600A5C164 /* SignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupViewController.h; sourceTree = "<group>"; };
 		2CCE00881C9D977600A5C164 /* SignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
-<<<<<<< HEAD
-		3E76B27325FC1270A038FC02 /* libPods-ChillinUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChillinUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5115367A52CFB585E08F07D5 /* Pods-ChillinTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChillinTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChillinTests/Pods-ChillinTests.release.xcconfig"; sourceTree = "<group>"; };
-		54AE741027724634B1DEFA67 /* Pods-ChillinUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChillinUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChillinUITests/Pods-ChillinUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		73E8FE35D4242A5CFADF3AEC /* libPods-ChillinTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChillinTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		87CAAD920FD6CE13FD9F34CA /* Pods-ChillinTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChillinTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChillinTests/Pods-ChillinTests.debug.xcconfig"; sourceTree = "<group>"; };
-		88B5F627F57DAF40BC14E2A3 /* Pods-Chillin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chillin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chillin/Pods-Chillin.debug.xcconfig"; sourceTree = "<group>"; };
-		8AD095CD8712776CC21D60F4 /* Pods-Chillin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chillin.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chillin/Pods-Chillin.release.xcconfig"; sourceTree = "<group>"; };
-		A4DCFA7F2F1F858A4014D2E6 /* Pods-ChillinUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChillinUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChillinUITests/Pods-ChillinUITests.release.xcconfig"; sourceTree = "<group>"; };
-		F1AEA0A4E010533C05D6F30A /* libPods-Chillin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Chillin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-=======
 		2F41DDFC24A81EEE3CF610D4 /* Pods-ChillinTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChillinTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChillinTests/Pods-ChillinTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6059517590551EC2BBCAECD6 /* libPods-Chillin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Chillin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77A4283BA181E6B624FC9471 /* libPods-ChillinUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChillinUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,7 +126,6 @@
 		DD01ABBC17085F57CD33DC1F /* Pods-Chillin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chillin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chillin/Pods-Chillin.debug.xcconfig"; sourceTree = "<group>"; };
 		E64DD4A68D3C8D7F13C6D9AD /* libPods-ChillinTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChillinTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8FAE6BB92E1990081EC053C /* Pods-ChillinTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChillinTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChillinTests/Pods-ChillinTests.release.xcconfig"; sourceTree = "<group>"; };
->>>>>>> Chillin/master
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,11 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
-				CACC1DA050364EFF5738C568 /* libPods-Chillin.a in Frameworks */,
-=======
 				BA6B26E4CBDF71DF7CADC4EF /* libPods-Chillin.a in Frameworks */,
->>>>>>> Chillin/master
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,11 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
-				0A17887E838B494B2A44D3F9 /* libPods-ChillinTests.a in Frameworks */,
-=======
 				7EF285CE100B2C4F954D1CF4 /* libPods-ChillinTests.a in Frameworks */,
->>>>>>> Chillin/master
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,19 +149,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
-				50EAC9A7929F9989B3516CE4 /* libPods-ChillinUITests.a in Frameworks */,
-=======
 				D8C1992DE3D23A3576B03FEE /* libPods-ChillinUITests.a in Frameworks */,
->>>>>>> Chillin/master
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-<<<<<<< HEAD
-=======
 		03C854CB9776CA81773D9655 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,7 +169,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
->>>>>>> Chillin/master
 		2CCE00031C9D954900A5C164 = {
 			isa = PBXGroup;
 			children = (
@@ -212,13 +176,8 @@
 				2CCE002B1C9D954900A5C164 /* ChillinTests */,
 				2CCE00361C9D954900A5C164 /* ChillinUITests */,
 				2CCE000D1C9D954900A5C164 /* Products */,
-<<<<<<< HEAD
-				E190A3365E42CE0A63A6D63B /* Pods */,
-				E4D94ACC7B43C60CF2B0FEC0 /* Frameworks */,
-=======
 				03C854CB9776CA81773D9655 /* Pods */,
 				779CA1E571B9E1A10410182F /* Frameworks */,
->>>>>>> Chillin/master
 			);
 			sourceTree = "<group>";
 		};
@@ -386,34 +345,12 @@
 			name = "Event Detail";
 			sourceTree = "<group>";
 		};
-<<<<<<< HEAD
-		E190A3365E42CE0A63A6D63B /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				88B5F627F57DAF40BC14E2A3 /* Pods-Chillin.debug.xcconfig */,
-				8AD095CD8712776CC21D60F4 /* Pods-Chillin.release.xcconfig */,
-				87CAAD920FD6CE13FD9F34CA /* Pods-ChillinTests.debug.xcconfig */,
-				5115367A52CFB585E08F07D5 /* Pods-ChillinTests.release.xcconfig */,
-				54AE741027724634B1DEFA67 /* Pods-ChillinUITests.debug.xcconfig */,
-				A4DCFA7F2F1F858A4014D2E6 /* Pods-ChillinUITests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		E4D94ACC7B43C60CF2B0FEC0 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F1AEA0A4E010533C05D6F30A /* libPods-Chillin.a */,
-				73E8FE35D4242A5CFADF3AEC /* libPods-ChillinTests.a */,
-				3E76B27325FC1270A038FC02 /* libPods-ChillinUITests.a */,
-=======
 		779CA1E571B9E1A10410182F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				6059517590551EC2BBCAECD6 /* libPods-Chillin.a */,
 				E64DD4A68D3C8D7F13C6D9AD /* libPods-ChillinTests.a */,
 				77A4283BA181E6B624FC9471 /* libPods-ChillinUITests.a */,
->>>>>>> Chillin/master
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -425,21 +362,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2CCE003C1C9D954900A5C164 /* Build configuration list for PBXNativeTarget "Chillin" */;
 			buildPhases = (
-<<<<<<< HEAD
-				AE3E361B4CC52201D82E4E00 /* [CP] Check Pods Manifest.lock */,
-				2CCE00081C9D954900A5C164 /* Sources */,
-				2CCE00091C9D954900A5C164 /* Frameworks */,
-				2CCE000A1C9D954900A5C164 /* Resources */,
-				734357A6F041AA628315589A /* [CP] Embed Pods Frameworks */,
-				4CC24EC5F2E949CD0C5E81C3 /* [CP] Copy Pods Resources */,
-=======
 				5A05A97E3F14A6475448C9FA /* [CP] Check Pods Manifest.lock */,
 				2CCE00081C9D954900A5C164 /* Sources */,
 				2CCE00091C9D954900A5C164 /* Frameworks */,
 				2CCE000A1C9D954900A5C164 /* Resources */,
 				BF5B91B4B8280CC7EE09266C /* [CP] Embed Pods Frameworks */,
 				D83F816714CD6F7838A48F7E /* [CP] Copy Pods Resources */,
->>>>>>> Chillin/master
 			);
 			buildRules = (
 			);
@@ -454,21 +382,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2CCE003F1C9D954900A5C164 /* Build configuration list for PBXNativeTarget "ChillinTests" */;
 			buildPhases = (
-<<<<<<< HEAD
-				5FF407824D32C11647F62C22 /* [CP] Check Pods Manifest.lock */,
-				2CCE00241C9D954900A5C164 /* Sources */,
-				2CCE00251C9D954900A5C164 /* Frameworks */,
-				2CCE00261C9D954900A5C164 /* Resources */,
-				C0FD8DC77B15B776E1C4EC19 /* [CP] Embed Pods Frameworks */,
-				664C244A1A48AFF4052FA1A8 /* [CP] Copy Pods Resources */,
-=======
 				988B1DE48D0B81ECC1AFA73C /* [CP] Check Pods Manifest.lock */,
 				2CCE00241C9D954900A5C164 /* Sources */,
 				2CCE00251C9D954900A5C164 /* Frameworks */,
 				2CCE00261C9D954900A5C164 /* Resources */,
 				0C9A5FF9AA7622A5079C2FED /* [CP] Embed Pods Frameworks */,
 				0A46383D306B47658C21A7F9 /* [CP] Copy Pods Resources */,
->>>>>>> Chillin/master
 			);
 			buildRules = (
 			);
@@ -484,19 +403,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2CCE00421C9D954900A5C164 /* Build configuration list for PBXNativeTarget "ChillinUITests" */;
 			buildPhases = (
-<<<<<<< HEAD
-				84BCA8D773C0305E3C856D2E /* [CP] Check Pods Manifest.lock */,
-				2CCE002F1C9D954900A5C164 /* Sources */,
-				2CCE00301C9D954900A5C164 /* Frameworks */,
-				2CCE00311C9D954900A5C164 /* Resources */,
-				699B316BAEF9094B0221214F /* [CP] Copy Pods Resources */,
-=======
 				830B8CB85117581BC3538376 /* [CP] Check Pods Manifest.lock */,
 				2CCE002F1C9D954900A5C164 /* Sources */,
 				2CCE00301C9D954900A5C164 /* Frameworks */,
 				2CCE00311C9D954900A5C164 /* Resources */,
 				64B962D902DAAAD642078C8D /* [CP] Copy Pods Resources */,
->>>>>>> Chillin/master
 			);
 			buildRules = (
 			);
@@ -591,41 +502,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-<<<<<<< HEAD
-		4CC24EC5F2E949CD0C5E81C3 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Chillin/Pods-Chillin-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5FF407824D32C11647F62C22 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		664C244A1A48AFF4052FA1A8 /* [CP] Copy Pods Resources */ = {
-=======
 		0A46383D306B47658C21A7F9 /* [CP] Copy Pods Resources */ = {
->>>>>>> Chillin/master
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -633,39 +510,6 @@
 			inputPaths = (
 			);
 			name = "[CP] Copy Pods Resources";
-<<<<<<< HEAD
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChillinTests/Pods-ChillinTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		699B316BAEF9094B0221214F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChillinUITests/Pods-ChillinUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		734357A6F041AA628315589A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-=======
->>>>>>> Chillin/master
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -733,11 +577,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-<<<<<<< HEAD
-		84BCA8D773C0305E3C856D2E /* [CP] Check Pods Manifest.lock */ = {
-=======
 		988B1DE48D0B81ECC1AFA73C /* [CP] Check Pods Manifest.lock */ = {
->>>>>>> Chillin/master
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -752,9 +592,6 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-<<<<<<< HEAD
-		AE3E361B4CC52201D82E4E00 /* [CP] Check Pods Manifest.lock */ = {
-=======
 		BF5B91B4B8280CC7EE09266C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -771,38 +608,18 @@
 			showEnvVarsInLog = 0;
 		};
 		D83F816714CD6F7838A48F7E /* [CP] Copy Pods Resources */ = {
->>>>>>> Chillin/master
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-<<<<<<< HEAD
-			name = "[CP] Check Pods Manifest.lock";
-=======
 			name = "[CP] Copy Pods Resources";
->>>>>>> Chillin/master
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		C0FD8DC77B15B776E1C4EC19 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChillinTests/Pods-ChillinTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Chillin/Pods-Chillin-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -986,11 +803,7 @@
 		};
 		2CCE003D1C9D954900A5C164 /* Debug */ = {
 			isa = XCBuildConfiguration;
-<<<<<<< HEAD
-			baseConfigurationReference = 88B5F627F57DAF40BC14E2A3 /* Pods-Chillin.debug.xcconfig */;
-=======
 			baseConfigurationReference = DD01ABBC17085F57CD33DC1F /* Pods-Chillin.debug.xcconfig */;
->>>>>>> Chillin/master
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -1010,11 +823,7 @@
 		};
 		2CCE003E1C9D954900A5C164 /* Release */ = {
 			isa = XCBuildConfiguration;
-<<<<<<< HEAD
-			baseConfigurationReference = 8AD095CD8712776CC21D60F4 /* Pods-Chillin.release.xcconfig */;
-=======
 			baseConfigurationReference = 0FAA27B07A621EAE4D7D791C /* Pods-Chillin.release.xcconfig */;
->>>>>>> Chillin/master
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -1033,11 +842,7 @@
 		};
 		2CCE00401C9D954900A5C164 /* Debug */ = {
 			isa = XCBuildConfiguration;
-<<<<<<< HEAD
-			baseConfigurationReference = 87CAAD920FD6CE13FD9F34CA /* Pods-ChillinTests.debug.xcconfig */;
-=======
 			baseConfigurationReference = 2F41DDFC24A81EEE3CF610D4 /* Pods-ChillinTests.debug.xcconfig */;
->>>>>>> Chillin/master
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ChillinTests/Info.plist;
@@ -1050,11 +855,7 @@
 		};
 		2CCE00411C9D954900A5C164 /* Release */ = {
 			isa = XCBuildConfiguration;
-<<<<<<< HEAD
-			baseConfigurationReference = 5115367A52CFB585E08F07D5 /* Pods-ChillinTests.release.xcconfig */;
-=======
 			baseConfigurationReference = F8FAE6BB92E1990081EC053C /* Pods-ChillinTests.release.xcconfig */;
->>>>>>> Chillin/master
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ChillinTests/Info.plist;
@@ -1067,11 +868,7 @@
 		};
 		2CCE00431C9D954900A5C164 /* Debug */ = {
 			isa = XCBuildConfiguration;
-<<<<<<< HEAD
-			baseConfigurationReference = 54AE741027724634B1DEFA67 /* Pods-ChillinUITests.debug.xcconfig */;
-=======
 			baseConfigurationReference = 1CA80568BA56A6E0FADF3749 /* Pods-ChillinUITests.debug.xcconfig */;
->>>>>>> Chillin/master
 			buildSettings = {
 				INFOPLIST_FILE = ChillinUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1084,11 +881,7 @@
 		};
 		2CCE00441C9D954900A5C164 /* Release */ = {
 			isa = XCBuildConfiguration;
-<<<<<<< HEAD
-			baseConfigurationReference = A4DCFA7F2F1F858A4014D2E6 /* Pods-ChillinUITests.release.xcconfig */;
-=======
 			baseConfigurationReference = C9183A0F00F753DA819074F3 /* Pods-ChillinUITests.release.xcconfig */;
->>>>>>> Chillin/master
 			buildSettings = {
 				INFOPLIST_FILE = ChillinUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

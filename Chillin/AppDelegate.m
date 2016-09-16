@@ -21,7 +21,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
         configuration.clientKey = @"1UxA7TR2HDuFSnILmLrJWi7zdlsnQz2ZYj2t9kls";
         configuration.server = @"http://chilln.herokuapp.com/parse";
     }]];
-    [PFUser enableRevocableSessionInBackground];
+//    [PFUser enableRevocableSessionInBackground];
     
 //    [Parse setApplicationId:@"VpU4JfFKNOI1syoeVaWwmSGbDeMFBfVLld2T7Fdi"
 //                  clientKey:@"1UxA7TR2HDuFSnILmLrJWi7zdlsnQz2ZYj2t9kls"];

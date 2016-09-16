@@ -167,10 +167,6 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-## ParseCrashReporting
-
-See https://www.parse.com/about/terms
-
 ## TPKeyboardAvoiding
 
 Copyright (c) 2013 Michael Tyson

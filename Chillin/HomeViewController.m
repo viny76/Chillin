@@ -24,7 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self configureAppearance];
+//    [self configureAppearance];
     self.tableView.allowsMultipleSelectionDuringEditing = NO;
     
     PFQuery *friendsQuery = [self.friendsRelation query];
@@ -36,23 +36,22 @@
         }
     }];
     
-    // Launch Timer
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerTick:) userInfo:nil repeats:YES];
-    
-    //reloadEvents
-    self.currentUser = [PFUser currentUser];
-    self.friendsRelation = [[PFUser currentUser] relationForKey:@"friends"];
-    
-    refreshControl = [[UIRefreshControl alloc]init];
-    [refreshControl beginRefreshing];
-    [self.tableView addSubview:refreshControl];
-    [refreshControl addTarget:self action:@selector(reloadEvents) forControlEvents:UIControlEventValueChanged];
+//    // Launch Timer
+//    self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerTick:) userInfo:nil repeats:YES];
+//    
+//    //reloadEvents
+//    self.currentUser = [PFUser currentUser];
+//    self.friendsRelation = [[PFUser currentUser] relationForKey:@"friends"];
+//    
+//    refreshControl = [[UIRefreshControl alloc]init];
+//    [refreshControl beginRefreshing];
+//    [self.tableView addSubview:refreshControl];
+//    [refreshControl addTarget:self action:@selector(reloadEvents) forControlEvents:UIControlEventValueChanged];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.navigationController.navigationBar setHidden:NO];
-    NSLog(@"%@", self.currentUser);
     if (!self.currentUser.objectId) {
         [PFUser logOut];
         AppDelegate *appDelegateTemp = (AppDelegate*)[[UIApplication sharedApplication]delegate];
