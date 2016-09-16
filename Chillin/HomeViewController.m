@@ -52,6 +52,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.navigationController.navigationBar setHidden:NO];
+    NSLog(@"%@", self.currentUser);
     if (!self.currentUser.objectId) {
         [PFUser logOut];
         AppDelegate *appDelegateTemp = (AppDelegate*)[[UIApplication sharedApplication]delegate];
